@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { DM_Sans } from 'next/font/google';
 import './globals.css';
-import { cn } from '@/utils/cn';
 
 const dmsans = DM_Sans({
   variable: '--font-dmsans',
@@ -21,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={cn('antialiased', dmsans.variable)}>{children}</body>
+      <body className={`antialiased ${dmsans.variable}`}>{children}</body>
     </html>
   );
 }
