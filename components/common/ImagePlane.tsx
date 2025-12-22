@@ -7,7 +7,7 @@ export interface IImagePlaneProps {
   size?: [number, number];
 }
 
-export function ImagePlane(props: IImagePlaneProps) {
+export function ImagePlane(props: Readonly<IImagePlaneProps>) {
   const { url, position = [0, 0, 0], size = [1, 1] } = props;
 
   const texture = useTexture(url, (loadedTexture) => {

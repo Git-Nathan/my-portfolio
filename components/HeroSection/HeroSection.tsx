@@ -1,7 +1,14 @@
 'use client';
 
 import { Canvas } from '@react-three/fiber';
-import { Center, MeshTransmissionMaterial, OrbitControls, Text3D } from '@react-three/drei';
+import {
+  Center,
+  Environment,
+  Lightformer,
+  MeshTransmissionMaterial,
+  OrbitControls,
+  Text3D,
+} from '@react-three/drei';
 import { Suspense } from 'react';
 import { useControls } from 'leva';
 import { Scene } from './Scene';
@@ -31,6 +38,8 @@ export function HeroSection() {
         <Suspense fallback={null}>
           <OrbitControls />
 
+          <color attach='background' args={['#e0e0e0']} />
+
           <ambientLight intensity={0.5} />
 
           <directionalLight
@@ -58,13 +67,22 @@ export function HeroSection() {
                   backside
                   backsideThickness={materialProps.backsideThickness}
                   thickness={materialProps.thickness}
-                  color={'#FF718F'}
+                  color={'#00E8E2'}
                 />
               </Text3D>
             </Center>
 
             <Scene />
           </MouseTiltWrapper>
+
+          <Environment preset='city'>
+            <Lightformer
+              intensity={8}
+              position={[10, 5, 0]}
+              scale={[10, 50, 1]}
+              onUpdate={(self) => self.lookAt(0, 0, 0)}
+            />
+          </Environment>
         </Suspense>
       </Canvas>
     </div>
