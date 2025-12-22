@@ -1,4 +1,5 @@
 import { useFrame } from '@react-three/fiber';
+import { useControls } from 'leva';
 import { ReactNode, useRef } from 'react';
 import { Group, MathUtils } from 'three';
 
@@ -6,12 +7,17 @@ export interface IMouseTiltWrapperProps {
   children: ReactNode;
 }
 
-export function MouseTiltWrapper(props: IMouseTiltWrapperProps) {
+export function MouseTiltWrapper(props: Readonly<IMouseTiltWrapperProps>) {
   const { children } = props;
+
+  const enableMouseTilt = useControls('Mouse Tilt', {
+    enabled: false,
+  }).enabled;
 
   const groupRef = useRef<Group>(null);
 
   useFrame(({ pointer }) => {
+    if (!enableMouseTilt) return;
     if (!groupRef.current) return;
 
     groupRef.current.position.x = MathUtils.lerp(groupRef.current.position.x, pointer.x * 20, 0.2);
