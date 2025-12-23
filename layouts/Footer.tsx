@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export const Footer = () => {
   return (
-    <div className='flex flex-col gap-8 bg-black p-16 text-white md:flex-row md:px-20 xl:px-44'>
+    <div className='relative flex flex-col gap-8 bg-black p-16 text-white md:flex-row md:px-20 xl:px-44'>
       <div className='flex max-w-150 flex-col gap-5 text-gray-300/85'>
         <Image
           src={'/images/logo.png'}

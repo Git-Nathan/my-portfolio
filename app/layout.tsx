@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`antialiased ${dmsans.variable}`}>
+      <body className={`relative h-full w-screen max-w-screen antialiased ${dmsans.variable}`}>
         <Header />
         {children}
         <Footer />

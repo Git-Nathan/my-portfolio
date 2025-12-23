@@ -2,8 +2,9 @@
 
 :root {
   --background: #ffffff;
-  --gradient-start: #32eaed;
-  --gradient-end: #9cc6fe;
+  --color-cyan: #a0f1ea;
+  --color-pink: #ead6ee;
+  --color-purple: #5531bc;
   --text-dark: #323232;
   --brand-color: #808285;
 }

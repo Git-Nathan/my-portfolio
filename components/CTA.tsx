@@ -11,7 +11,7 @@ const CTA = () => {
     <div
       id='contact'
       ref={sectionRef}
-      className='flex flex-col items-center overflow-x-clip bg-linear-to-t from-[#afbbe4] to-white px-14 pt-16 pb-24'
+      className='flex flex-col items-center overflow-x-clip px-14 pt-16 pb-24'
     >
       <div className='relative flex max-w-142.5 flex-col items-center justify-center'>
         <motion.img

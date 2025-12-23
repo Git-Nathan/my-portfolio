@@ -10,12 +10,12 @@ import { FaArrowRight } from 'react-icons/fa';
 
 const WhyChooseMe = () => {
   return (
-    <div className='flex flex-col items-center overflow-x-hidden bg-gradient-to-t from-[#acbae8] to-white pb-24'>
-      <div className='mx-auto mt-20 flex flex-col items-center px-8 font-medium md:w-[550px] lg:w-[630px]'>
+    <div className='flex flex-col items-center overflow-x-hidden pb-24'>
+      <div className='mx-auto mt-20 flex flex-col items-center px-8 font-medium md:w-137.5 lg:w-157.5'>
         <div className='w-fit rounded-xl border-2 border-slate-300/80 p-0.5 px-3 text-sm'>
           About
         </div>
-        <div className='bg-gradient-to-b from-black to-[#002499] bg-clip-text py-6 text-center text-3xl font-bold tracking-tighter text-transparent md:text-4xl lg:text-5xl'>
+        <div className='bg-linear-to-b from-black to-[#002499] bg-clip-text py-6 text-center text-3xl font-bold tracking-tighter text-transparent md:text-4xl lg:text-5xl'>
           Why Choose My Editing Services?
         </div>
 
@@ -62,7 +62,7 @@ const WhyChooseMe = () => {
         />
       </div>
 
-      <div className='grid max-w-[1400px] px-10 sm:grid-cols-1 md:grid-cols-2 md:gap-8 md:px-20 lg:grid-cols-4 lg:px-28'>
+      <div className='grid max-w-350 px-10 sm:grid-cols-1 md:grid-cols-2 md:gap-8 md:px-20 lg:grid-cols-4 lg:px-28'>
         <div className='mt-16'>
           <BuildingIcon className='mb-3' />
           <div className='text-2xl font-bold'>Tailored for Real Estate</div>

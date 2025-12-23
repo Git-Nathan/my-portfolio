@@ -1,14 +1,14 @@
-'use client'
+'use client';
 
-import { AppLink } from '@/components/Link'
-import { MobileSideBar } from '@/components/MobileSideBar'
-import Image from 'next/image'
+import { AppLink } from '@/components/Link';
+import { MobileSideBar } from '@/components/MobileSideBar';
+import Image from 'next/image';
 
 export function Header() {
   return (
-    <div className='fixed top-0 z-[100] w-full gap-4'>
-      <header className='sticky top-0 z-40 mx-auto w-full max-w-[1440px] py-2 pr-2 pl-2'>
-        <div className='inset-0 flex h-[60px] items-center justify-between overflow-hidden rounded-full border border-white/30 bg-neutral-950/5 pr-[10px] pl-5 shadow-[inset_0_0_8px_1px_hsl(0,0%,100%,0.2)] backdrop-blur-[16px]'>
+    <div className='fixed top-0 z-100 w-full gap-4'>
+      <header className='sticky top-0 z-40 mx-auto w-full max-w-360 py-2 pr-2 pl-2'>
+        <div className='inset-0 flex h-15 items-center justify-between overflow-hidden rounded-full border border-white/30 bg-neutral-950/5 pr-2.5 pl-5 shadow-[inset_0_0_8px_1px_hsl(0,0%,100%,0.2)] backdrop-blur-lg'>
           <div className='rounded-full bg-[#231f20]/80 p-1'>
             <Image
               src={'/images/logo.png'}
@@ -39,7 +39,7 @@ export function Header() {
               href='https://www.instagram.com/studio.liosmooth'
               target='_blank'
               rel='noreferrer'
-              className='border-none bg-gradient-to-tr from-[#f58529] via-[#dd2a7b] to-[#8134af] text-sm text-white shadow-[inset_0_0_6px_1px_hsl(0,0%,100%,0.3)] lg:text-base'
+              className='border-none bg-linear-to-tr from-[#f58529] via-[#dd2a7b] to-[#8134af] text-sm text-white shadow-[inset_0_0_6px_1px_hsl(0,0%,100%,0.3)] lg:text-base'
             >
               Message Us on Instagram
             </AppLink>
@@ -48,5 +48,5 @@ export function Header() {
         </div>
       </header>
     </div>
-  )
+  );
 }

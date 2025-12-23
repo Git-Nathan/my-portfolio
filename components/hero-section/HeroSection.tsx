@@ -6,7 +6,6 @@ import {
   Environment,
   Lightformer,
   MeshTransmissionMaterial,
-  OrbitControls,
   Text3D,
 } from '@react-three/drei';
 import { Suspense } from 'react';
@@ -36,7 +35,7 @@ export function HeroSection() {
     <div id='canvas-container' className='h-200'>
       <Canvas orthographic camera={{ zoom: 5, position: [0, 0, 200], far: 300, near: 50 }}>
         <Suspense fallback={null}>
-          <OrbitControls />
+          {/* <OrbitControls /> */}
 
           <color attach='background' args={['#e0e0e0']} />
 
