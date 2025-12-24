@@ -2,13 +2,13 @@ import CTA from '@/components/CTA';
 import { Triangle } from '@/components/geometric-objects/Triangle';
 import { Sphere } from '@/components/geometric-objects/Sphere';
 import { Torus } from '@/components/geometric-objects/Torus';
-import Hero from '@/components/Hero';
 import { HeroSection } from '@/components/hero-section/HeroSection';
 import Portfolio from '@/components/Portfolio';
 import Pricing from '@/components/Pricing';
-import WhyChooseMe from '@/components/WhyChooseMe';
 import { Section } from '@/layouts/Section';
 import { BlurOverlay } from '@/components/common/BlurOverlay';
+import WhyChooseMe from '@/components/WhyChooseMe';
+import AboutMe from '@/components/AboutMe';
 
 export default function Home() {
   return (
@@ -25,7 +25,7 @@ export default function Home() {
           </>
         }
       >
-        <Hero />
+        <AboutMe />
       </Section>
 
       <Section
