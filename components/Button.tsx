@@ -1,9 +1,9 @@
-import { cn } from '@/utils/cn'
-import { ButtonHTMLAttributes, ReactNode } from 'react'
+import { cn } from '@/utils/cn';
+import { ButtonHTMLAttributes, ReactNode } from 'react';
 
 export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  icon?: ReactNode
-  variant?: 'solid' | 'gradient' | 'glass' | 'darkGlass'
+  icon?: ReactNode;
+  variant?: 'solid' | 'gradient' | 'glass' | 'darkGlass';
 }
 
 export function Button({
@@ -12,22 +12,23 @@ export function Button({
   icon,
   variant = 'solid',
   ...props
-}: IButtonProps) {
+}: Readonly<IButtonProps>) {
   const getBaseClasses = () => {
-    if (variant === 'solid') return 'bg-black px-5 py-2 text-white'
+    if (variant === 'solid') return 'bg-black px-5 py-2 text-white';
+
+    if (variant === 'gradient')
+      return 'border-none bg-linear-to-tr from-gradient-start to-gradient-end px-4 py-2 text-white shadow-[inset_0_0_6px_1px_hsl(0,0%,100%,0.3)]';
 
     if (variant === 'glass')
-      return 'border border-white/50 bg-white/30 px-4 py-2 text-[#323232] shadow-[inset_0_0_6px_1px_hsl(0,0%,100%,0.5)] backdrop-blur-[12px]'
+      return 'border border-white/50 bg-white/30 px-4 py-2 text-[#323232] shadow-[inset_0_0_6px_1px_hsl(0,0%,100%,0.5)] backdrop-blur-[12px]';
 
     if (variant === 'darkGlass')
-      return 'border border-black/50 bg-black/60 px-4 py-2 text-white shadow-[inset_0_0_6px_1px_hsl(0,0%,0%,0.5)] backdrop-blur-[12px]'
-
-    return
-  }
+      return 'border border-black/50 bg-black/60 px-4 py-2 text-white shadow-[inset_0_0_6px_1px_hsl(0,0%,0%,0.5)] backdrop-blur-[12px]';
+  };
 
   const getHoverClasses = () => {
-    return 'transition-transform duration-200 ease-in-out hover:scale-105'
-  }
+    return 'transition-transform duration-200 ease-in-out hover:scale-105';
+  };
 
   return (
     <button
@@ -42,5 +43,5 @@ export function Button({
       {icon}
       {children}
     </button>
-  )
+  );
 }

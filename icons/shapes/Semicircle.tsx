@@ -1,0 +1,23 @@
+import { cn } from '@/utils/cn';
+import type { SVGProps } from 'react';
+
+export const Semicircle = (props: SVGProps<SVGSVGElement>) => {
+  const { className, ...restProps } = props;
+
+  return (
+    <svg
+      width='320'
+      height='200'
+      viewBox='0 0 320 200'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      className={cn('absolute', className)}
+      {...restProps}
+    >
+      <path
+        d='M320 166.921C320 185.19 305.19 200 286.921 200L33.0794 200C14.8102 200 2.20218e-06 185.19 6.05025e-07 166.921L0 160C-7.72516e-06 71.6345 71.6344 7.72516e-06 160 0C248.366 -7.72516e-06 320 71.6344 320 160V166.921Z'
+        fill='#6750A4'
+      />
+    </svg>
+  );
+};

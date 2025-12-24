@@ -49,30 +49,30 @@ export function HeroSection() {
             shadow-mapSize-height={1024}
           />
 
-          <MouseTiltWrapper>
-            <Center position={[0, 0, 20]}>
-              <Text3D
-                font='/fonts/Chewy_Regular.json'
-                // size={text3DProps.size}
-                // height={text3DProps.height}
-                // curveSegments={text3DProps.curveSegments}
-                // bevelEnabled={text3DProps.bevelEnabled}
-                // bevelThickness={text3DProps.bevelThickness}
-                // bevelSize={text3DProps.bevelSize}
-                // bevelSegments={text3DProps.bevelSegments}
-              >
-                {text}
-                <MeshTransmissionMaterial
-                  backside
-                  // backsideThickness={materialProps.backsideThickness}
-                  // thickness={materialProps.thickness}
-                  color={'#00E8E2'}
-                />
-              </Text3D>
-            </Center>
+          {/* <MouseTiltWrapper> */}
+          <Center position={[0, 0, 20]}>
+            <Text3D
+              font='/fonts/Chewy_Regular.json'
+              // size={text3DProps.size}
+              // height={text3DProps.height}
+              // curveSegments={text3DProps.curveSegments}
+              // bevelEnabled={text3DProps.bevelEnabled}
+              // bevelThickness={text3DProps.bevelThickness}
+              // bevelSize={text3DProps.bevelSize}
+              // bevelSegments={text3DProps.bevelSegments}
+            >
+              {text}
+              <MeshTransmissionMaterial
+                backside
+                // backsideThickness={materialProps.backsideThickness}
+                // thickness={materialProps.thickness}
+                color={'#00E8E2'}
+              />
+            </Text3D>
+          </Center>
 
-            <Scene />
-          </MouseTiltWrapper>
+          <Scene />
+          {/* </MouseTiltWrapper> */}
 
           <Environment preset='city'>
             <Lightformer

@@ -7,11 +7,15 @@
   --color-purple: #5531bc;
   --text-dark: #323232;
   --brand-color: #808285;
+  --gradient-start: #5eb6f8;
+  --gradient-end: #9293d6;
 }
 
 @theme inline {
   --color-background: var(--background);
   --font-dmsans: var(--font-dmsans), sans-serif;
+  --color-gradient-start: var(--gradient-start);
+  --color-gradient-end: var(--gradient-end);
 }
 
 body {
