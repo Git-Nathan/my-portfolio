@@ -22,7 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`relative h-full w-screen max-w-screen antialiased ${dmsans.variable}`}>
+      <body
+        className={`relative h-full w-screen max-w-screen overflow-x-hidden antialiased ${dmsans.variable}`}
+      >
         <Header />
         {children}
         <Footer />

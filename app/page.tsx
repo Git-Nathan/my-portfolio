@@ -1,5 +1,4 @@
 import CTA from '@/components/CTA';
-import { HeroSection } from '@/components/hero-section/HeroSection';
 import Portfolio from '@/components/Portfolio';
 import Pricing from '@/components/Pricing';
 import { Section } from '@/layouts/Section';
@@ -14,7 +13,7 @@ export default function Home() {
     <>
       <BlurOverlay />
 
-      <HeroSection />
+      {/* <HeroSection /> */}
 
       <Section
         backgroundObjects={
