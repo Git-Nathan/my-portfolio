@@ -7,7 +7,7 @@ const AboutMe = () => {
   return (
     <div
       id='home'
-      className='relative flex w-full flex-col items-center justify-between gap-20 py-20 md:py-50 lg:flex-row'
+      className='relative flex w-full flex-col items-center justify-between gap-20 py-20 md:py-40 lg:flex-row'
     >
       {/* <MatterJsExample /> */}
 
