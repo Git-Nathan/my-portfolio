@@ -2,11 +2,15 @@ import { useState, useEffect, useCallback } from 'react';
 import { motion } from 'motion/react';
 import { interpolate } from 'flubber';
 import { shapePaths } from '@/utils/shapePaths';
+import { cn } from '@/utils/cn';
 
 export interface IMorphShapeProps {
+  defaultShape?: string;
   paths?: string[];
   color?: string;
   onClick?: () => void;
+  className?: string;
+  size?: number;
 }
 
 const ANIMATION_DURATION = 200;
@@ -24,13 +28,16 @@ function easeInOutCubic(t: number): number {
 }
 
 export function MorphShape({
+  defaultShape = shapePaths[0],
   paths = shapePaths,
   color = '#6750A4',
+  size = 24,
   onClick,
+  className,
 }: Readonly<IMorphShapeProps>) {
-  const [path, setPath] = useState(paths[0]);
-  const [nextPath, setNextPath] = useState(getRandomDifferentShape(paths, paths[0]));
-  const [fromPath, setFromPath] = useState(paths[0]);
+  const [path, setPath] = useState(defaultShape);
+  const [nextPath, setNextPath] = useState(getRandomDifferentShape(paths, defaultShape));
+  const [fromPath, setFromPath] = useState(defaultShape);
 
   useEffect(() => {
     const interpolator = interpolate(fromPath, nextPath, { maxSegmentLength: 2 });
@@ -58,17 +65,29 @@ export function MorphShape({
   }, [nextPath, paths, onClick]);
 
   return (
-    <motion.svg
-      width={320}
-      height={320}
-      viewBox='0 0 320 320'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
-      className='cursor-pointer'
+    <motion.button
+      className={cn('flex cursor-pointer items-center justify-center', className)}
       onClick={handleClick}
-      preserveAspectRatio='xMidYMid meet'
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.95 }}
     >
-      <motion.path d={path} fill={color} />
-    </motion.svg>
+      <svg
+        width={380}
+        height={380}
+        viewBox='0 0 380 380'
+        style={{
+          width: size,
+          height: size,
+        }}
+      >
+        <motion.path
+          d={path}
+          fill={color}
+          style={{
+            boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+          }}
+        />
+      </svg>
+    </motion.button>
   );
 }

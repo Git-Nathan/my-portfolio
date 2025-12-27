@@ -5,8 +5,7 @@ import { Section } from '@/layouts/Section';
 import { BlurOverlay } from '@/components/common/BlurOverlay';
 import WhyChooseMe from '@/components/WhyChooseMe';
 import AboutMe from '@/components/AboutMe';
-import { SquareShape } from '@/icons/shapes/SquareShape';
-import { SlantedShape } from '@/icons/shapes/SlantedShape';
+import { Shape } from '@/components/common/Shape';
 
 export default function Home() {
   return (
@@ -18,8 +17,8 @@ export default function Home() {
       <Section
         backgroundObjects={
           <>
-            <SquareShape className='top-1/12 left-1/12 -z-1 size-90' />
-            <SquareShape className='right-1/12 bottom-3/12 -z-1 size-75' />
+            <Shape className='top-1/12 left-1/12 -z-1 size-90 opacity-40' />
+            <Shape className='right-1/12 bottom-3/12 -z-1 size-75 opacity-40' />
           </>
         }
       >
@@ -29,8 +28,8 @@ export default function Home() {
       <Section
         backgroundObjects={
           <>
-            <SlantedShape className='top-0 left-1/12 -z-1 size-90' />
-            <SlantedShape className='right-1/12 bottom-3/12 -z-1' />
+            <Shape className='top-0 left-1/12 -z-1 size-90 opacity-40' />
+            <Shape className='right-1/12 bottom-3/12 -z-1 opacity-40' />
           </>
         }
       >
@@ -40,8 +39,8 @@ export default function Home() {
       <Section
         backgroundObjects={
           <>
-            <SquareShape className='top-0 left-1/12 -z-1' />
-            <SquareShape className='right-1/12 bottom-3/12 -z-1' />
+            <Shape className='top-0 left-1/12 -z-1 opacity-40' />
+            <Shape className='right-1/12 bottom-3/12 -z-1 opacity-40' />
           </>
         }
       >
@@ -51,8 +50,8 @@ export default function Home() {
       <Section
         backgroundObjects={
           <>
-            <SquareShape className='top-0 left-1/12 -z-1 size-90' />
-            <SquareShape className='right-1/12 bottom-3/12 -z-1' />
+            <Shape className='top-0 left-1/12 -z-1 size-90 opacity-40' />
+            <Shape className='right-1/12 bottom-3/12 -z-1 opacity-40' />
           </>
         }
       >
@@ -62,8 +61,8 @@ export default function Home() {
       <Section
         backgroundObjects={
           <>
-            <SquareShape className='top-0 left-1/12 -z-1 size-90' />
-            <SquareShape className='right-1/12 bottom-3/12 -z-1' />
+            <Shape className='top-0 left-1/12 -z-1 size-90 opacity-40' />
+            <Shape className='right-1/12 bottom-3/12 -z-1 opacity-40' />
           </>
         }
       >

@@ -15,9 +15,7 @@ export function PopOutCircleAvatar() {
           />
         </div>
 
-        <div className='absolute top-0 left-0 flex h-full w-full items-center justify-center'>
-          <MorphShape color='#6750A4' />
-        </div>
+        <MorphShape className='absolute bottom-0 left-0' size={80} color='#7655BE' />
       </div>
     </div>
   );
