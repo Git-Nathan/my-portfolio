@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { interpolate } from 'flubber';
 import { shapePaths } from '@/utils/shapePaths';
 import { cn } from '@/utils/cn';
+import { getExcludedRandomString } from '@/utils/getExcludedRandomString';
 
 export interface IMorphShapeProps {
   defaultShape?: string;
@@ -10,34 +11,24 @@ export interface IMorphShapeProps {
   color?: string;
   onClick?: () => void;
   className?: string;
-  size?: number;
 }
 
 const ANIMATION_DURATION = 200;
-
-function getRandomDifferentShape(allPaths: string[], exclude: string): string {
-  let newShape = exclude;
-  while (newShape === exclude && allPaths.length > 1) {
-    newShape = allPaths[Math.floor(Math.random() * allPaths.length)];
-  }
-  return newShape;
-}
 
 function easeInOutCubic(t: number): number {
   return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
 }
 
 export function MorphShape({
-  defaultShape = shapePaths[0],
+  defaultShape,
   paths = shapePaths,
   color = '#6750A4',
-  size = 24,
   onClick,
   className,
 }: Readonly<IMorphShapeProps>) {
-  const [path, setPath] = useState(defaultShape);
-  const [nextPath, setNextPath] = useState(getRandomDifferentShape(paths, defaultShape));
-  const [fromPath, setFromPath] = useState(defaultShape);
+  const [path, setPath] = useState(shapePaths[0]);
+  const [nextPath, setNextPath] = useState(getExcludedRandomString(paths, shapePaths[0]));
+  const [fromPath, setFromPath] = useState(shapePaths[0]);
 
   useEffect(() => {
     const interpolator = interpolate(fromPath, nextPath, { maxSegmentLength: 2 });
@@ -60,34 +51,27 @@ export function MorphShape({
 
   const handleClick = useCallback(() => {
     setFromPath(nextPath);
-    setNextPath(getRandomDifferentShape(paths, nextPath));
+    setNextPath(getExcludedRandomString(paths, nextPath));
     onClick?.();
   }, [nextPath, paths, onClick]);
 
   return (
-    <motion.button
-      className={cn('flex cursor-pointer items-center justify-center', className)}
+    <motion.svg
       onClick={handleClick}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.95 }}
+      whileHover={{ scale: 1.2 }}
+      whileTap={{ scale: 0.9 }}
+      width={380}
+      height={380}
+      viewBox='0 0 380 380'
+      className={cn('size-6 cursor-pointer', className)}
     >
-      <svg
-        width={380}
-        height={380}
-        viewBox='0 0 380 380'
+      <motion.path
+        d={defaultShape ?? path}
+        fill={color}
         style={{
-          width: size,
-          height: size,
+          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
         }}
-      >
-        <motion.path
-          d={path}
-          fill={color}
-          style={{
-            boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
-          }}
-        />
-      </svg>
-    </motion.button>
+      />
+    </motion.svg>
   );
 }

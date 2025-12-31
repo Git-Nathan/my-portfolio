@@ -16,7 +16,7 @@ const AboutMe = () => {
           <div className='inline-flex items-center gap-2 rounded-lg border border-[#222]/10 px-3 py-1 font-semibold tracking-tight'>
             <p>Hello there!</p>
           </div>
-          <h1 className='mt-6 bg-linear-to-b from-black to-[#002ab3] bg-clip-text pb-2 text-5xl font-bold tracking-tighter text-transparent md:text-5xl'>
+          <h1 className='mt-6 pb-2 text-5xl font-bold tracking-tighter text-black md:text-5xl'>
             I’m Nathan
             <br />
             Frontend Developer
@@ -27,8 +27,8 @@ const AboutMe = () => {
             architecture, performance optimization, and clean code.
           </p>
           <Button
-            variant='gradient'
-            className='pointer-events-auto mt-6 text-lg font-medium'
+            variant='solid'
+            className='pointer-events-auto mt-6 bg-[#7655BE] text-lg font-medium'
             onClick={() => {
               document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
             }}
