@@ -6,7 +6,7 @@ export function BlurOverlay(props: Readonly<HTMLAttributes<HTMLDivElement>>) {
 
   return (
     <div
-      className={cn('absolute inset-0 z-0 size-full backdrop-blur-2xl', className)}
+      className={cn('absolute inset-0 z-0 size-full bg-white/40 backdrop-blur-2xl', className)}
       {...restProps}
     />
   );

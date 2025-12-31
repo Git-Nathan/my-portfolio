@@ -3,7 +3,7 @@ import { ButtonHTMLAttributes, ReactNode } from 'react';
 
 export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   icon?: ReactNode;
-  variant?: 'solid' | 'gradient' | 'glass' | 'darkGlass';
+  variant?: 'solid';
 }
 
 export function Button({
@@ -15,15 +15,6 @@ export function Button({
 }: Readonly<IButtonProps>) {
   const getBaseClasses = () => {
     if (variant === 'solid') return 'bg-black px-5 py-2 text-white';
-
-    if (variant === 'gradient')
-      return 'border-none bg-linear-to-tr from-gradient-start to-gradient-end px-4 py-2 text-white shadow-[inset_0_0_6px_1px_hsl(0,0%,100%,0.3)]';
-
-    if (variant === 'glass')
-      return 'border border-white/50 bg-white/30 px-4 py-2 text-[#323232] shadow-[inset_0_0_6px_1px_hsl(0,0%,100%,0.5)] backdrop-blur-[12px]';
-
-    if (variant === 'darkGlass')
-      return 'border border-black/50 bg-black/60 px-4 py-2 text-white shadow-[inset_0_0_6px_1px_hsl(0,0%,0%,0.5)] backdrop-blur-[12px]';
   };
 
   const getHoverClasses = () => {

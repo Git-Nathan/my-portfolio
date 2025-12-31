@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect, useCallback } from 'react';
 import { motion } from 'motion/react';
 import { interpolate } from 'flubber';
@@ -8,7 +10,6 @@ import { getExcludedRandomString } from '@/utils/getExcludedRandomString';
 export interface IMorphShapeProps {
   defaultShape?: string;
   paths?: string[];
-  color?: string;
   onClick?: () => void;
   className?: string;
 }
@@ -22,7 +23,6 @@ function easeInOutCubic(t: number): number {
 export function MorphShape({
   defaultShape,
   paths = shapePaths,
-  color = '#6750A4',
   onClick,
   className,
 }: Readonly<IMorphShapeProps>) {
@@ -65,13 +65,7 @@ export function MorphShape({
       viewBox='0 0 380 380'
       className={cn('size-6 cursor-pointer', className)}
     >
-      <motion.path
-        d={defaultShape ?? path}
-        fill={color}
-        style={{
-          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
-        }}
-      />
+      <motion.path d={defaultShape ?? path} />
     </motion.svg>
   );
 }

@@ -4,18 +4,17 @@
   --background: #ffffff;
   --color-cyan: #a0f1ea;
   --color-pink: #ead6ee;
-  --color-purple: #5531bc;
+  --color-purple: #7655BE;
   --text-dark: #323232;
-  --brand-color: #808285;
-  --gradient-start: #5eb6f8;
-  --gradient-end: #9293d6;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-cyan: var(--color-cyan);
+  --color-pink: var(--color-pink);
+  --color-purple: var(--color-purple);
+  --color-text-dark: var(--text-dark);
   --font-dmsans: var(--font-dmsans), sans-serif;
-  --color-gradient-start: var(--gradient-start);
-  --color-gradient-end: var(--gradient-end);
 }
 
 body {
