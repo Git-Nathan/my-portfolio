@@ -13,8 +13,12 @@ const CTA = () => {
     <Section
       backgroundObjects={
         <>
-          <Shape className='top-0 left-1/12 -z-1 size-90' />
-          <Shape className='right-1/12 bottom-3/12 -z-1' />
+          <Shape className='top-0 left-1/12 -z-1 size-90' spinDuration={88} />
+          <Shape
+            className='right-1/12 bottom-3/12 -z-1'
+            spinDuration={72}
+            spinDirection='reverse'
+          />
         </>
       }
     >

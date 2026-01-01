@@ -2,9 +2,11 @@
 
 :root {
   --background: #ffffff;
-  --color-cyan: #a0f1ea;
+  --color-cyan: #00f1dd;
   --color-pink: #ead6ee;
   --color-purple: #7655BE;
+  --color-red: #ff6663;
+  --color-blue: #0085FE;
   --text-dark: #323232;
 }
 
@@ -14,6 +16,9 @@
   --color-pink: var(--color-pink);
   --color-purple: var(--color-purple);
   --color-text-dark: var(--text-dark);
+  --color-red: var(--color-red);
+  --color-light-red: var(--color-light-red);
+  --color-blue: var(--color-blue);
   --font-dmsans: var(--font-dmsans), sans-serif;
 }
 
@@ -21,4 +26,32 @@ body {
   background: var(--background);
   color: black;
   font-family: var(--font-dmsans), sans-serif;
+}
+
+@keyframes diagonal-float {
+  0% {
+    transform: translate(calc(-50vw - 400px), 40vh) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(calc(50vw + 400px), -40vh) rotate(360deg);
+  }
+}
+
+.animate-diagonal-float {
+  animation: diagonal-float 60s linear infinite;
+}
+
+@keyframes diagonal-float-reverse {
+  0% {
+    transform: translate(calc(-50vw - 400px), 40vh) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(calc(50vw + 400px), -40vh) rotate(-360deg);
+  }
+}
+
+.animate-diagonal-float-reverse {
+  animation: diagonal-float-reverse 60s linear infinite;
 }

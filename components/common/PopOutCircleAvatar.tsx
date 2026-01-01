@@ -3,7 +3,7 @@ import { MorphShape } from './MorphShape';
 
 export function PopOutCircleAvatar() {
   return (
-    <div className='relative flex-1'>
+    <div className='relative w-[80vw] max-w-125 flex-1 lg:me-[2vw]'>
       <div className='flex aspect-square size-full items-center justify-center'>
         <div className='aspect-square w-full max-w-125 rotate-12 overflow-hidden rounded-[30%] bg-[#CEBBFD]'>
           <MorphShape className='fill-purple absolute right-[24%] bottom-[40%] z-0 size-[26%] translate-x-1/2 translate-y-1/2 animate-[spin_90s_linear_infinite_reverse]' />

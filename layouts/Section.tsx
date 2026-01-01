@@ -5,9 +5,7 @@ export interface ISectionProps extends HTMLAttributes<HTMLDivElement> {
   backgroundObjects?: ReactNode;
 }
 
-export function Section(props: Readonly<ISectionProps>) {
-  const { children, backgroundObjects, ...restProps } = props;
-
+export function Section({ children, backgroundObjects, ...restProps }: Readonly<ISectionProps>) {
   return (
     <section className={cn('relative flex items-center justify-center')} {...restProps}>
       {backgroundObjects}

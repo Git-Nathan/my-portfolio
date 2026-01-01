@@ -60,8 +60,3 @@ export const shapePaths = [
   gemPath,
   pixelCirclePath,
 ];
-
-export const getRandomShapePath = () => {
-  const randomIndex = Math.floor(Math.random() * shapePaths.length);
-  return shapePaths[randomIndex];
-};

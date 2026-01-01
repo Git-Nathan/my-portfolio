@@ -6,8 +6,8 @@ const Portfolio: React.FC = () => {
     <Section
       backgroundObjects={
         <>
-          <Shape className='top-0 left-1/12 -z-1' />
-          <Shape className='right-1/12 bottom-3/12 -z-1' />
+          <Shape className='top-0 left-1/12 -z-1' spinDuration={86} spinDirection='reverse' />
+          <Shape className='right-1/12 bottom-3/12 -z-1' spinDuration={74} />
         </>
       }
     >

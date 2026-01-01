@@ -1,10 +1,2 @@
-const SPIN_ANIMATIONS = [
-  'animate-[spin_90s_linear_infinite_reverse]',
-  'animate-[spin_90s_linear_infinite]',
-  'animate-[spin_70s_linear_infinite]',
-  'animate-[spin_70s_linear_infinite_reverse]',
-] as const;
-
-export function getRandomSpinClass() {
-  return SPIN_ANIMATIONS[Math.floor(Math.random() * SPIN_ANIMATIONS.length)];
-}
+export const SPIN_DURATIONS = [70, 80, 90] as const;
+export const SPIN_DIRECTIONS = ['normal', 'reverse'] as const;
