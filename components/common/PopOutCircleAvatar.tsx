@@ -19,7 +19,7 @@ export function PopOutCircleAvatar() {
           />
         </div>
 
-        <MorphShape className='fill-purple absolute bottom-[40%] left-[4%] size-[30%] -translate-x-1/2 translate-y-1/2 animate-[spin_70s_linear_infinite]' />
+        <MorphShape className='fill-purple absolute bottom-[35%] left-[4%] size-[34%] -translate-x-1/2 translate-y-1/2 animate-[spin_70s_linear_infinite]' />
 
         <MorphShape className='fill-purple absolute top-[24%] right-[8%] size-[40%] translate-x-1/2 -translate-y-1/2 animate-[spin_70s_linear_infinite_reverse]' />
       </div>

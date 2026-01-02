@@ -1,27 +1,15 @@
-import { IoMdCheckmark } from 'react-icons/io';
 import { Section } from '@/layouts/Section';
-import { Shape } from '@/components/common/Shape';
+import { IoMdCheckmark } from 'react-icons/io';
 
 const Pricing = () => {
   return (
-    <Section
-      backgroundObjects={
-        <>
-          <Shape
-            className='top-0 left-1/12 -z-1 size-90'
-            spinDuration={92}
-            spinDirection='reverse'
-          />
-          <Shape className='right-1/12 bottom-3/12 -z-1' spinDuration={78} />
-        </>
-      }
-    >
+    <Section>
       <div id='services' className='mb-8'>
-        <div className='mx-auto mt-16 mb-12 flex max-w-[700px] flex-col items-center px-12 font-medium'>
+        <div className='mx-auto mt-16 mb-12 flex max-w-175 flex-col items-center px-12 font-medium'>
           <div className='w-fit rounded-xl border-2 border-slate-300/80 p-0.5 px-3 text-sm'>
             Boost your business
           </div>
-          <div className='bg-gradient-to-b from-black to-[#002499] bg-clip-text py-6 text-center text-3xl font-bold tracking-tighter text-transparent md:text-4xl lg:text-5xl'>
+          <div className='bg-linear-to-b from-black to-[#002499] bg-clip-text py-6 text-center text-3xl font-bold tracking-tighter text-transparent md:text-4xl lg:text-5xl'>
             Choose Your Package
           </div>
 
@@ -31,7 +19,7 @@ const Pricing = () => {
         </div>
 
         <div className='flex flex-col items-center justify-center gap-8 pb-10 lg:flex-row lg:items-end'>
-          <div className='max-w-[307px] rounded-2xl border-2 border-gray-100 p-8 shadow-xl'>
+          <div className='max-w-76.75 rounded-2xl border-2 border-gray-100 p-8 shadow-xl'>
             <div className='font-bold text-gray-500'>Standard Package</div>
             <div className='py-8'>
               <div className='mb-2'>
@@ -45,22 +33,22 @@ const Pricing = () => {
             </div>
             <div className='flex flex-col gap-3'>
               <div className='flex'>
-                <IoMdCheckmark className='mt-[3px] mr-2 shrink-0' /> Basic trimming & merging
+                <IoMdCheckmark className='mt-0.75 mr-2 shrink-0' /> Basic trimming & merging
               </div>
               <div className='flex'>
-                <IoMdCheckmark className='mt-[3px] mr-2 shrink-0' /> Balance overall colors of the
+                <IoMdCheckmark className='mt-0.75 mr-2 shrink-0' /> Balance overall colors of the
                 video
               </div>
               <div className='flex'>
-                <IoMdCheckmark className='mt-[3px] mr-2 shrink-0' /> Basic color correction
+                <IoMdCheckmark className='mt-0.75 mr-2 shrink-0' /> Basic color correction
               </div>
             </div>
           </div>
 
-          <div className='max-w-[307px] rounded-2xl border-2 bg-black p-8 text-white shadow-2xl'>
+          <div className='max-w-76.75 rounded-2xl border-2 bg-black p-8 text-white shadow-2xl'>
             <div className='flex items-center justify-between'>
               <div className='font-bold text-gray-500'>Premium Package</div>
-              <div className='w-fit rounded-xl border-2 border-slate-300/20 bg-gradient-to-r from-pink-500 via-lime-600 to-sky-400 bg-clip-text p-0.5 px-2 text-xs font-bold tracking-tighter text-transparent'>
+              <div className='w-fit rounded-xl border-2 border-slate-300/20 bg-linear-to-r from-pink-500 via-lime-600 to-sky-400 bg-clip-text p-0.5 px-2 text-xs font-bold tracking-tighter text-transparent'>
                 Most Popular
               </div>
             </div>
@@ -76,27 +64,27 @@ const Pricing = () => {
             </div>
             <div className='flex flex-col gap-6'>
               <div className='flex'>
-                <IoMdCheckmark className='mt-[3px] mr-2 shrink-0' /> Smooth trimming paced to
+                <IoMdCheckmark className='mt-0.75 mr-2 shrink-0' /> Smooth trimming paced to
                 transitions
               </div>
               <div className='flex'>
-                <IoMdCheckmark className='mt-[3px] mr-2 shrink-0' /> Remove unnecessary breaks and
+                <IoMdCheckmark className='mt-0.75 mr-2 shrink-0' /> Remove unnecessary breaks and
                 pauses
               </div>
               <div className='flex'>
-                <IoMdCheckmark className='mt-[3px] mr-2 shrink-0' /> Improve visual flow between
+                <IoMdCheckmark className='mt-0.75 mr-2 shrink-0' /> Improve visual flow between
                 scenes
               </div>
               <div className='flex'>
-                <IoMdCheckmark className='mt-[3px] mr-2 shrink-0' /> Advanced color adjustment
+                <IoMdCheckmark className='mt-0.75 mr-2 shrink-0' /> Advanced color adjustment
               </div>
               <div className='flex'>
-                <IoMdCheckmark className='mt-[3px] mr-2 shrink-0' /> Modify brightness, contrast,
+                <IoMdCheckmark className='mt-0.75 mr-2 shrink-0' /> Modify brightness, contrast,
                 exposure, and saturation
               </div>
             </div>
           </div>
-          <div className='max-w-[307px] rounded-2xl border-2 border-gray-100 p-8 shadow-xl'>
+          <div className='max-w-76.75 rounded-2xl border-2 border-gray-100 p-8 shadow-xl'>
             <div className='font-bold text-gray-500'>High-end Package</div>
             <div className='py-8'>
               <div className='mb-2'>
@@ -110,31 +98,29 @@ const Pricing = () => {
             </div>
             <div className='flex flex-col gap-6'>
               <div className='flex'>
-                <IoMdCheckmark className='mt-[3px] mr-2 shrink-0' /> Creative professional editing
+                <IoMdCheckmark className='mt-0.75 mr-2 shrink-0' /> Creative professional editing
                 with dynamic pacing
               </div>
               <div className='flex'>
-                <IoMdCheckmark className='mt-[3px] mr-2 shrink-0' /> Fully polished merging &
+                <IoMdCheckmark className='mt-0.75 mr-2 shrink-0' /> Fully polished merging &
                 sequencing
               </div>
               <div className='flex'>
-                <IoMdCheckmark className='mt-[3px] mr-2 shrink-0' /> Designed for high-impact videos
+                <IoMdCheckmark className='mt-0.75 mr-2 shrink-0' /> Designed for high-impact videos
               </div>
               <div className='flex'>
-                <IoMdCheckmark className='mt-[3px] mr-2 shrink-0' /> Rhythm-based timing and
+                <IoMdCheckmark className='mt-0.75 mr-2 shrink-0' /> Rhythm-based timing and
                 transitions
               </div>
               <div className='flex'>
-                <IoMdCheckmark className='mt-[3px] mr-2 shrink-0' /> Professional-grade color
-                grading
+                <IoMdCheckmark className='mt-0.75 mr-2 shrink-0' /> Professional-grade color grading
               </div>
               <div className='flex'>
-                <IoMdCheckmark className='mt-[3px] mr-2 shrink-0' /> Detailed exposure, contrast,
-                and tone control
+                <IoMdCheckmark className='mt-0.75 mr-2 shrink-0' /> Detailed exposure, contrast, and
+                tone control
               </div>
               <div className='flex'>
-                <IoMdCheckmark className='mt-[3px] mr-2 shrink-0' /> Cinema-quality color
-                enhancement
+                <IoMdCheckmark className='mt-0.75 mr-2 shrink-0' /> Cinema-quality color enhancement
               </div>
             </div>
           </div>

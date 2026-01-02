@@ -1,8 +1,7 @@
+import { Footer } from '@/layouts/Footer';
 import type { Metadata } from 'next';
 import { DM_Sans } from 'next/font/google';
 import './globals.css';
-import { Header } from '@/layouts/Header';
-import { Footer } from '@/layouts/Footer';
 
 const dmsans = DM_Sans({
   variable: '--font-dmsans',
@@ -22,10 +21,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body
-        className={`relative h-full w-screen max-w-screen overflow-x-hidden antialiased ${dmsans.variable}`}
-      >
-        <Header />
+      <body className={`relative antialiased ${dmsans.variable}`}>
+        {/* <Header /> */}
         {children}
         <Footer />
         <div id='mobile-sidebar-portal' />

@@ -4,26 +4,12 @@ import { BarcodeIcon } from '@/icons/BarcodeIcon';
 import { BuildingIcon } from '@/icons/BuildingIcon';
 import { FlashIcon } from '@/icons/FlashIcon';
 import { MessageIcon } from '@/icons/MessageIcon';
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-import { FaArrowRight } from 'react-icons/fa';
 import { Section } from '@/layouts/Section';
-import { Shape } from '@/components/common/Shape';
+import { FaArrowRight } from 'react-icons/fa';
 
 const WhyChooseMe = () => {
   return (
-    <Section
-      backgroundObjects={
-        <>
-          <Shape
-            className='top-0 left-1/12 -z-1 size-90'
-            spinDuration={70}
-            spinDirection='reverse'
-          />
-          <Shape className='right-1/12 bottom-3/12 -z-1' spinDuration={90} />
-        </>
-      }
-    >
+    <Section>
       <div className='flex flex-col items-center overflow-x-hidden pb-24'>
         <div className='mx-auto mt-20 flex flex-col items-center px-8 font-medium md:w-137.5 lg:w-157.5'>
           <div className='w-fit rounded-xl border-2 border-slate-300/80 p-0.5 px-3 text-sm'>
@@ -36,44 +22,6 @@ const WhyChooseMe = () => {
           <div className='mb-8 text-center text-lg md:text-xl'>
             Because your listings deserve more than just another video.
           </div>
-        </div>
-        <div className='relative mx-3 mt-3 flex items-center md:mx-10'>
-          <motion.img
-            src={'/images/edit-3d.png'}
-            alt='Editing Software'
-            className='absolute -top-10 -right-14 size-30 md:size-44 xl:-right-32 xl:size-64'
-            animate={{
-              translateY: '-20%',
-            }}
-            transition={{
-              duration: 3.5,
-              repeat: Infinity,
-              ease: 'easeInOut',
-              repeatType: 'reverse',
-            }}
-          />
-          <Image
-            src={'/images/final-cut-screen.png'}
-            alt='Product Image'
-            width={1200}
-            height={806}
-            className='h-auto rounded-3xl px-1'
-          />
-          <motion.img
-            src={'/images/final-cut-pro-logo.png'}
-            alt='Final Cut Pro Logo'
-            className='absolute -left-11 size-30 md:-left-20 md:size-44 xl:-left-36 xl:size-64'
-            initial={{ translateY: '10%' }}
-            animate={{
-              translateY: '-10%',
-            }}
-            transition={{
-              duration: 3,
-              repeat: Infinity,
-              ease: 'easeInOut',
-              repeatType: 'reverse',
-            }}
-          />
         </div>
 
         <div className='grid max-w-350 px-10 sm:grid-cols-1 md:grid-cols-2 md:gap-8 md:px-20 lg:grid-cols-4 lg:px-28'>

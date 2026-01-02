@@ -1,61 +1,20 @@
 'use client';
 
-import { useRef } from 'react';
-import { motion } from 'framer-motion';
-import { AppLink } from './Link';
 import { Section } from '@/layouts/Section';
-import { Shape } from '@/components/common/Shape';
+import { useRef } from 'react';
+import { AppLink } from './Link';
 
 const CTA = () => {
   const sectionRef = useRef(null);
 
   return (
-    <Section
-      backgroundObjects={
-        <>
-          <Shape className='top-0 left-1/12 -z-1 size-90' spinDuration={88} />
-          <Shape
-            className='right-1/12 bottom-3/12 -z-1'
-            spinDuration={72}
-            spinDirection='reverse'
-          />
-        </>
-      }
-    >
+    <Section>
       <div
         id='contact'
         ref={sectionRef}
         className='flex flex-col items-center overflow-x-clip px-14 pt-16 pb-24'
       >
         <div className='relative flex max-w-142.5 flex-col items-center justify-center'>
-          <motion.img
-            src={'/images/camera-3d.png'}
-            alt='Editing Software'
-            className='absolute -left-35 size-40 md:-left-46 md:size-50 xl:-left-72 xl:size-72'
-            animate={{
-              translateY: '-20%',
-            }}
-            transition={{
-              duration: 3.5,
-              repeat: Infinity,
-              ease: 'easeInOut',
-              repeatType: 'reverse',
-            }}
-          />
-          <motion.img
-            src={'/images/video-3d.png'}
-            alt='Editing Software'
-            className='absolute -right-35 size-40 md:-right-46 md:size-50 xl:-right-72 xl:size-72'
-            animate={{
-              translateY: '-20%',
-            }}
-            transition={{
-              duration: 3.5,
-              repeat: Infinity,
-              ease: 'easeInOut',
-              repeatType: 'reverse',
-            }}
-          />
           <div className='bg-linear-to-b from-black to-[#002499] bg-clip-text py-6 text-center text-4xl font-bold tracking-tighter text-transparent md:text-5xl lg:text-6xl'>
             Let’s Bring Your Listings to Life
           </div>

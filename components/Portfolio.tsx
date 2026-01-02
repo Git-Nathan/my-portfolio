@@ -1,22 +1,14 @@
 import { Section } from '@/layouts/Section';
-import { Shape } from '@/components/common/Shape';
 
 const Portfolio: React.FC = () => {
   return (
-    <Section
-      backgroundObjects={
-        <>
-          <Shape className='top-0 left-1/12 -z-1' spinDuration={86} spinDirection='reverse' />
-          <Shape className='right-1/12 bottom-3/12 -z-1' spinDuration={74} />
-        </>
-      }
-    >
+    <Section>
       <div id='about' className='flex flex-col items-center overflow-x-hidden pb-24'>
-        <div className='mx-auto mt-20 flex flex-col items-center px-8 font-medium md:w-[550px] lg:w-[630px]'>
+        <div className='mx-auto mt-20 flex flex-col items-center px-8 font-medium md:w-137.5 lg:w-157.5'>
           <div className='w-fit rounded-xl border-2 border-slate-300/80 p-0.5 px-3 text-sm'>
             Portfolio
           </div>
-          <div className='bg-gradient-to-b from-black to-[#002499] bg-clip-text py-6 text-center text-3xl font-bold tracking-tighter text-transparent md:text-4xl lg:text-5xl'>
+          <div className='bg-linear-to-b from-black to-[#002499] bg-clip-text py-6 text-center text-3xl font-bold tracking-tighter text-transparent md:text-4xl lg:text-5xl'>
             My Work
           </div>
 
@@ -26,7 +18,7 @@ const Portfolio: React.FC = () => {
         </div>
 
         <div className='flex w-full flex-wrap items-center justify-center gap-16 px-8 pt-4'>
-          <div className='flex w-full max-w-[360px] flex-col items-center justify-center rounded-xl p-4 shadow-2xl'>
+          <div className='flex w-full max-w-90 flex-col items-center justify-center rounded-xl p-4 shadow-2xl'>
             <div
               className='relative w-full overflow-hidden rounded-2xl shadow-lg'
               style={{ aspectRatio: '9/16' }}
@@ -37,11 +29,11 @@ const Portfolio: React.FC = () => {
                 allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                 allowFullScreen
                 className='absolute top-0 left-0 h-full w-full'
-              ></iframe>
+              />
             </div>
           </div>
 
-          <div className='flex w-full max-w-[360px] flex-col items-center justify-center rounded-xl p-4 shadow-2xl'>
+          <div className='flex w-full max-w-90 flex-col items-center justify-center rounded-xl p-4 shadow-2xl'>
             <div
               className='relative w-full overflow-hidden rounded-2xl shadow-lg'
               style={{ aspectRatio: '9/16' }}
@@ -52,11 +44,11 @@ const Portfolio: React.FC = () => {
                 allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                 allowFullScreen
                 className='absolute top-0 left-0 h-full w-full'
-              ></iframe>
+              />
             </div>
           </div>
 
-          <div className='flex w-full max-w-[360px] flex-col items-center justify-center rounded-xl p-4 shadow-2xl'>
+          <div className='flex w-full max-w-90 flex-col items-center justify-center rounded-xl p-4 shadow-2xl'>
             <div
               className='relative w-full overflow-hidden rounded-2xl shadow-lg'
               style={{ aspectRatio: '9/16' }}
@@ -67,7 +59,7 @@ const Portfolio: React.FC = () => {
                 allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                 allowFullScreen
                 className='absolute top-0 left-0 h-full w-full'
-              ></iframe>
+              />
             </div>
           </div>
         </div>

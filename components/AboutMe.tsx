@@ -1,87 +1,10 @@
-import { Section } from '@/layouts/Section';
 import { Button } from './Button';
 import { PopOutCircleAvatar } from './common/PopOutCircleAvatar';
-import { Shape } from './common/Shape';
-import {
-  slantedPath,
-  softBurstPath,
-  fourSidedCookiePath,
-  pentagonPath,
-  pixelCirclePath,
-  gemPath,
-  puffyDiamondPath,
-} from '@/utils/shapePaths';
-import { InverseMouseParallax } from './common/InverseMouseParallax';
-import { FloatingShape } from './common/FloatingShape';
+import { Section } from '@/layouts/Section';
 
-const AboutMe = () => {
+export const AboutMe = () => {
   return (
-    <Section
-      backgroundObjects={
-        <>
-          <InverseMouseParallax className='top-100 -z-1 -rotate-12'>
-            <FloatingShape delay='-20s'>
-              <Shape
-                className='fill-purple bottom-[10vw] left-0 size-[16vw] -translate-x-1/2 translate-y-1/2'
-                path={softBurstPath}
-              />
-              <Shape
-                className='fill-red bottom-[2vw] left-[-8vw] size-[20vw] -translate-x-1/2 translate-y-1/2'
-                path={fourSidedCookiePath}
-              />
-              <Shape
-                className='fill-blue bottom-[2vw] left-[8vw] size-[20vw] -translate-x-1/2 translate-y-1/2'
-                path={pentagonPath}
-              />
-              <Shape
-                className='fill-cyan top-[8vw] size-[25vw] -translate-x-1/2 -translate-y-1/2 -rotate-45'
-                path={slantedPath}
-              />
-            </FloatingShape>
-          </InverseMouseParallax>
-          <InverseMouseParallax className='top-350 -z-1 -rotate-12'>
-            <FloatingShape delay='-34s' reverseRotation>
-              <Shape
-                className='fill-purple bottom-[10vw] left-0 size-[16vw] -translate-x-1/2 translate-y-1/2'
-                path={softBurstPath}
-              />
-              <Shape
-                className='fill-red bottom-[2vw] left-[-8vw] size-[20vw] -translate-x-1/2 translate-y-1/2'
-                path={puffyDiamondPath}
-              />
-              <Shape
-                className='fill-cyan top-[8vw] size-[25vw] -translate-x-1/2 -translate-y-1/2 -rotate-45'
-                path={pixelCirclePath}
-              />
-            </FloatingShape>
-          </InverseMouseParallax>
-          <InverseMouseParallax className='top-200 left-1/2 -z-1'>
-            <FloatingShape>
-              <Shape
-                className='fill-cyan bottom-[5vw] left-[6vw] size-[18vw] -translate-x-1/2 translate-y-1/2 rotate-40'
-                path={fourSidedCookiePath}
-              />
-              <Shape
-                className='fill-purple top-[5vw] size-[16vw] -translate-x-1/2 -translate-y-1/2 rotate-12'
-                path={slantedPath}
-              />
-            </FloatingShape>
-          </InverseMouseParallax>
-          <InverseMouseParallax className='top-10 left-1/2 -z-1'>
-            <FloatingShape delay='-45s' reverseRotation>
-              <Shape
-                className='fill-blue bottom-[8vw] left-[6vw] size-[12vw] -translate-x-1/2 translate-y-1/2 rotate-40'
-                path={pixelCirclePath}
-              />
-              <Shape
-                className='fill-red -top-[3vw] size-[8vw] -translate-x-1/2 -translate-y-1/2 rotate-12'
-                path={gemPath}
-              />
-            </FloatingShape>
-          </InverseMouseParallax>
-        </>
-      }
-    >
+    <Section>
       <div
         id='home'
         className='relative flex w-full flex-col items-center justify-between gap-15 py-20 md:py-40 lg:flex-row lg:gap-20'
@@ -118,5 +41,3 @@ const AboutMe = () => {
     </Section>
   );
 };
-
-export default AboutMe;
