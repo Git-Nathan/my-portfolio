@@ -1,12 +1,12 @@
 'use client';
 
+import { CloseIcon } from '@/icons/CloseIcon';
+import { MenuIcon } from '@/icons/MenuIcon';
+import { cn } from '@/utils/cn';
 import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { cn } from '@/utils/cn';
 import { Button } from './Button';
-import { MenuIcon } from '@/icons/MenuIcon';
 import { AppLink } from './Link';
-import { CloseIcon } from '@/icons/CloseIcon';
 
 export function MobileSideBar() {
   const [openSideBar, setOpenSideBar] = useState(false);
@@ -38,7 +38,6 @@ export function MobileSideBar() {
           <h2 className='text-xl font-bold text-white'>Menu</h2>
           <Button
             className='p-1 text-white lg:hidden'
-            variant='glass'
             icon={<CloseIcon className='scale-125' />}
             onClick={handleToggleOpenSideBar}
           />
@@ -80,12 +79,7 @@ export function MobileSideBar() {
   return (
     <>
       {portalContainer ? createPortal(sideBarContent, portalContainer) : sideBarContent}
-      <Button
-        className='p-1 lg:hidden'
-        variant='darkGlass'
-        icon={<MenuIcon />}
-        onClick={handleToggleOpenSideBar}
-      />
+      <Button className='p-1 lg:hidden' icon={<MenuIcon />} onClick={handleToggleOpenSideBar} />
     </>
   );
 }
