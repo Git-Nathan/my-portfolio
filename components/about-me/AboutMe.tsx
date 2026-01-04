@@ -1,15 +1,16 @@
-import { Button } from './Button';
-import { PopOutCircleAvatar } from './common/PopOutCircleAvatar';
 import { Section } from '@/layouts/Section';
+import { Button } from '../common/Button';
+import { ColorPalette } from './ColorPalette';
+import { PopOutAvatar } from './PopOutAvatar';
 
 export const AboutMe = () => {
   return (
     <Section>
       <div
         id='home'
-        className='relative flex w-full flex-col items-center justify-between gap-15 py-20 md:py-40 lg:flex-row lg:gap-20'
+        className='relative flex w-full flex-col items-center justify-between gap-15 py-20 lg:h-screen lg:flex-row lg:gap-20'
       >
-        <div className='pointer-events-none z-10 flex flex-1 flex-col items-start justify-center pe-8 md:pe-12'>
+        <div className='z-10 flex flex-1 flex-col items-start justify-center pe-8 md:pe-12'>
           <div className='max-w-xl'>
             <div className='inline-flex items-center gap-2 rounded-lg border border-[#222]/10 px-3 py-1 font-semibold tracking-tight'>
               <p>Hello there!</p>
@@ -24,19 +25,23 @@ export const AboutMe = () => {
               intuitive, responsive interfaces that users enjoy. I’m passionate about
               component-driven architecture, performance optimization, and clean code.
             </p>
-            <Button
-              variant='solid'
-              className='pointer-events-auto mt-6 bg-[#7655BE] text-lg font-medium'
-              // onClick={() => {
-              //   document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
-              // }}
-            >
-              View My Work
-            </Button>
+            <div className='mt-6 flex flex-col items-start gap-8 lg:flex-row lg:items-center'>
+              <Button
+                variant='solid'
+                className='bg-purple shrink-0 text-lg font-medium whitespace-nowrap'
+                // onClick={() => {
+                //   document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+                // }}
+              >
+                View My Work
+              </Button>
+
+              <ColorPalette />
+            </div>
           </div>
         </div>
 
-        <PopOutCircleAvatar />
+        <PopOutAvatar />
       </div>
     </Section>
   );

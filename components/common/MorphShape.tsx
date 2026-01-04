@@ -1,11 +1,11 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
-import { motion } from 'motion/react';
-import { interpolate } from 'flubber';
-import { shapePaths } from '@/utils/shapePaths';
 import { cn } from '@/utils/cn';
 import { getExcludedRandomString } from '@/utils/getExcludedRandomString';
+import { shapePaths } from '@/utils/shapePaths';
+import { interpolate } from 'flubber';
+import { motion } from 'motion/react';
+import { useCallback, useEffect, useState } from 'react';
 
 export interface IMorphShapeProps {
   defaultShape?: string;
@@ -64,6 +64,8 @@ export function MorphShape({
       height={380}
       viewBox='0 0 380 380'
       className={cn('size-6 cursor-pointer', className)}
+      stroke='currentColor'
+      fill='currentColor'
     >
       <motion.path d={defaultShape ?? path} />
     </motion.svg>

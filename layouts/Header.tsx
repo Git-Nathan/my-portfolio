@@ -1,23 +1,14 @@
-'use client';
-
+import { Logo } from '@/components/common/Logo';
+import { LightDarkToggle } from '@/components/header/LightDarkToggle';
 import { AppLink } from '@/components/Link';
-import { MobileSideBar } from '@/components/MobileSideBar';
-import Image from 'next/image';
+import { MobileSideBar } from './MobileSideBar';
 
 export function Header() {
   return (
     <div className='fixed top-0 z-100 w-full gap-4'>
       <header className='sticky top-0 z-40 mx-auto w-full max-w-360 py-2 pr-2 pl-2'>
-        <div className='inset-0 flex h-15 items-center justify-between overflow-hidden rounded-full border border-white/30 bg-neutral-950/5 pr-2.5 pl-5 shadow-[inset_0_0_8px_1px_hsl(0,0%,100%,0.2)] backdrop-blur-lg'>
-          <div className='rounded-full bg-[#231f20]/80 p-1'>
-            <Image
-              src={'/images/logo.png'}
-              alt='Logo'
-              className='cursor-pointer'
-              width={40}
-              height={40}
-            />
-          </div>
+        <div className='inset-0 flex h-15 items-center justify-between overflow-hidden rounded-full border border-white/30 bg-neutral-950/8 pr-2.5 pl-5 shadow-[inset_0_0_8px_1px_hsl(0,0%,100%,0.2)] backdrop-blur-lg'>
+          <Logo />
           <nav className='absolute left-1/2 -translate-x-1/2'>
             <ul className='hidden items-center gap-5 font-medium text-neutral-900 lg:flex'>
               <li>
@@ -35,14 +26,7 @@ export function Header() {
             </ul>
           </nav>
           <div className='flex items-center gap-2'>
-            <AppLink
-              href='https://www.instagram.com/studio.liosmooth'
-              target='_blank'
-              rel='noreferrer'
-              className='border-none bg-linear-to-tr from-[#f58529] via-[#dd2a7b] to-[#8134af] text-sm text-white shadow-[inset_0_0_6px_1px_hsl(0,0%,100%,0.3)] lg:text-base'
-            >
-              Message Us on Instagram
-            </AppLink>
+            <LightDarkToggle />
             <MobileSideBar />
           </div>
         </div>

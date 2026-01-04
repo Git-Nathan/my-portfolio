@@ -1,10 +1,18 @@
 import { Footer } from '@/layouts/Footer';
+import { Header } from '@/layouts/Header';
+import { ThemeProvider } from '@/providers/ThemeProvider';
 import type { Metadata } from 'next';
-import { DM_Sans } from 'next/font/google';
+import { Baloo_Bhaijaan_2, DM_Sans } from 'next/font/google';
 import './globals.css';
 
 const dmsans = DM_Sans({
   variable: '--font-dmsans',
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+});
+
+const balooBhaijaan2 = Baloo_Bhaijaan_2({
+  variable: '--font-balooBhaijaan2',
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
 });
@@ -20,12 +28,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
-      <body className={`relative antialiased ${dmsans.variable}`}>
-        {/* <Header /> */}
-        {children}
-        <Footer />
-        <div id='mobile-sidebar-portal' />
+    <html lang='en' suppressHydrationWarning>
+      <body
+        className={`relative bg-white antialiased dark:bg-black ${dmsans.variable} ${balooBhaijaan2.variable}`}
+      >
+        <ThemeProvider defaultTheme='system' enableSystem>
+          <Header />
+          {children}
+          <Footer />
+          <div id='mobile-sidebar-portal' />
+        </ThemeProvider>
       </body>
     </html>
   );

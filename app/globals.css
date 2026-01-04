@@ -1,16 +1,19 @@
 @import 'tailwindcss';
 
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
 :root {
-  --background: #ffffff;
-  --color-cyan: #00f1dd;
+  --color-main: #7655BE;
+  --color-cyan: #169eb4;
   --color-pink: #ead6ee;
   --color-purple: #7655BE;
   --color-red: #ff6663;
   --color-blue: #0085FE;
-  --text-dark: #323232;
+  --color-blue: #0083febd;
 }
 
 @theme inline {
+  --color-main: var(--color-main);
   --color-background: var(--background);
   --color-cyan: var(--color-cyan);
   --color-pink: var(--color-pink);
@@ -19,13 +22,20 @@
   --color-red: var(--color-red);
   --color-light-red: var(--color-light-red);
   --color-blue: var(--color-blue);
+
   --font-dmsans: var(--font-dmsans), sans-serif;
+  --font-baloo: var(--font-balooBhaijaan2), cursive;
 }
 
 body {
-  background: var(--background);
   color: black;
   font-family: var(--font-dmsans), sans-serif;
+
+  @apply dark:text-white;
+}
+
+button {
+  cursor: pointer;
 }
 
 @keyframes diagonal-float {

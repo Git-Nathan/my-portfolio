@@ -12,7 +12,7 @@ export function Section({ children, backgroundObjects, ...restProps }: Readonly<
       {...restProps}
     >
       {backgroundObjects}
-      <div className='relative flex w-full max-w-7xl flex-col items-center justify-center px-[4%]'>
+      <div className='relative flex w-full max-w-360 flex-col items-center justify-center px-[4%]'>
         {children}
       </div>
     </section>
