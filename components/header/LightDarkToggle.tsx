@@ -3,13 +3,18 @@
 import { useThemeStore } from '@/stores/theme.store';
 import { flowerPath } from '@/utils/shapePaths';
 import { useTheme } from 'next-themes';
+import { useEffect, useState } from 'react';
 
 export function LightDarkToggle() {
   const { setTheme, resolvedTheme } = useTheme();
 
   const { mainColor } = useThemeStore();
 
-  const isDark = resolvedTheme === 'dark';
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    setIsDark(resolvedTheme === 'dark');
+  }, [resolvedTheme]);
 
   return (
     <button

@@ -58,8 +58,6 @@ export function MorphShape({
   return (
     <motion.svg
       onClick={handleClick}
-      whileHover={{ scale: 1.2 }}
-      whileTap={{ scale: 0.9 }}
       width={380}
       height={380}
       viewBox='0 0 380 380'
