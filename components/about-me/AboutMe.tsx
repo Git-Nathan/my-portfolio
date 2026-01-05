@@ -8,14 +8,14 @@ export const AboutMe = () => {
     <Section>
       <div
         id='home'
-        className='relative flex w-full flex-col items-center justify-between gap-15 py-20 lg:h-screen lg:flex-row lg:gap-20'
+        className='relative mt-24 flex w-full flex-col items-center justify-between gap-15 lg:mt-0 lg:h-screen lg:flex-row lg:gap-20 lg:pb-[6vh]'
       >
         <div className='z-10 flex flex-1 flex-col items-start justify-center pe-8 md:pe-12'>
           <div className='max-w-xl'>
-            <div className='inline-flex items-center gap-2 rounded-lg border border-[#222]/10 px-3 py-1 font-semibold tracking-tight'>
+            <div className='inline-flex items-center gap-2 rounded-lg border border-[#222]/10 px-3 py-1 font-semibold tracking-tight dark:border-[#d8d8d8]/50'>
               <p>Hello there!</p>
             </div>
-            <h1 className='mt-6 pb-2 text-5xl font-bold tracking-tighter text-black md:text-5xl'>
+            <h1 className='mt-6 pb-2 text-5xl font-bold tracking-tighter md:text-5xl'>
               I’m Nathan
               <br />
               Frontend Developer

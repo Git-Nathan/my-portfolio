@@ -5,19 +5,20 @@ import { flowerPath } from '@/utils/shapePaths';
 import { useTheme } from 'next-themes';
 
 export function LightDarkToggle() {
-  const { theme, setTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
 
   const { mainColor } = useThemeStore();
 
-  const isDark = theme === 'dark';
+  const isDark = resolvedTheme === 'dark';
 
   return (
     <button
-      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
       className='mx-1 h-8 w-14 rounded-full p-0.75 transition-all duration-200'
       style={{
         backgroundColor: `${mainColor}63`,
       }}
+      suppressHydrationWarning
     >
       <div
         className='size-6.5 rounded-full transition-all duration-200'
@@ -26,6 +27,7 @@ export function LightDarkToggle() {
           backgroundColor: isDark ? '#ffffffb0' : 'white',
           transform: !isDark ? 'translateX(0)' : 'translateX(24px)',
         }}
+        suppressHydrationWarning
       >
         <svg
           width='380'
@@ -37,6 +39,7 @@ export function LightDarkToggle() {
           style={{
             opacity: !isDark ? 1 : 0,
           }}
+          suppressHydrationWarning
         >
           <path d={flowerPath} />
         </svg>
@@ -47,6 +50,7 @@ export function LightDarkToggle() {
               backgroundColor: mainColor,
               opacity: !isDark ? 0 : 1,
             }}
+            suppressHydrationWarning
           />
           <div
             className='absolute size-1 translate-x-1 -translate-y-1.5 rounded-full transition-all duration-200'
@@ -54,6 +58,7 @@ export function LightDarkToggle() {
               backgroundColor: mainColor,
               opacity: !isDark ? 0 : 1,
             }}
+            suppressHydrationWarning
           />
           <div
             className='absolute size-1.5 translate-x-1 translate-y-1 rounded-full transition-all duration-200'
@@ -61,6 +66,7 @@ export function LightDarkToggle() {
               backgroundColor: mainColor,
               opacity: !isDark ? 0 : 1,
             }}
+            suppressHydrationWarning
           />
         </div>
       </div>
