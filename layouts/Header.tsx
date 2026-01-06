@@ -15,10 +15,10 @@ export function Header() {
                 <AppLink href='#home'>Home</AppLink>
               </li>
               <li>
-                <AppLink href='#about'>Portfolio</AppLink>
+                <AppLink href='#about'>About</AppLink>
               </li>
               <li>
-                <AppLink href='#services'>Pricing</AppLink>
+                <AppLink href='#portfolio'>Portfolio</AppLink>
               </li>
               <li>
                 <AppLink href='#contact'>Contact</AppLink>
