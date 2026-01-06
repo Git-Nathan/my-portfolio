@@ -18,8 +18,8 @@ export function Background() {
   return (
     <div className='absolute inset-0 overflow-x-clip'>
       <InverseMouseParallax className='left-1/2 -z-1'>
-        <div className='translate-y-70 -rotate-12'>
-          <FloatingShape className='-rotate-12' delay='-25s'>
+        <div className='translate-y-40 -rotate-12'>
+          <FloatingShape className='-rotate-12' delay='-28s'>
             <Shape
               className='fill-purple bottom-[10vw] left-0 size-[16vw] -translate-x-1/2 translate-y-1/2'
               path={softBurstPath}
@@ -55,7 +55,7 @@ export function Background() {
           </FloatingShape>
         </div>
         <div className='translate-y-200'>
-          <FloatingShape>
+          <FloatingShape delay='-4s'>
             <Shape
               className='fill-cyan bottom-[5vw] left-[6vw] size-[18vw] -translate-x-1/2 translate-y-1/2 rotate-40'
               path={fourSidedCookiePath}
@@ -95,7 +95,7 @@ export function Background() {
           </FloatingShape>
         </div>
         <div className='translate-y-120'>
-          <FloatingShape className='-rotate-4' delay='-14s'>
+          <FloatingShape reverseRotation className='-rotate-4' delay='-19s'>
             <Shape
               className='fill-cyan top-[2vw] left-[-6vw] size-[10vw] -translate-x-1/2 -translate-y-1/2 rotate-6'
               path={pillPath}
@@ -110,8 +110,8 @@ export function Background() {
             />
           </FloatingShape>
         </div>
-        <div className='translate-y-200'>
-          <FloatingShape delay='-46s'>
+        <div className='translate-y-290'>
+          <FloatingShape delay='-53s'>
             <Shape
               className='fill-red bottom-[5vw] left-[6vw] size-[18vw] -translate-x-1/2 translate-y-1/2 rotate-40'
               path={fourSidedCookiePath}

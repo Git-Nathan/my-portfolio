@@ -1,6 +1,6 @@
 import { Section } from '@/layouts/Section';
 
-const Portfolio: React.FC = () => {
+export const Portfolio: React.FC = () => {
   return (
     <Section>
       <div id='about' className='flex flex-col items-center overflow-x-hidden pb-24'>
@@ -67,5 +67,3 @@ const Portfolio: React.FC = () => {
     </Section>
   );
 };
-
-export default Portfolio;

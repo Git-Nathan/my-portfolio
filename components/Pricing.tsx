@@ -1,7 +1,7 @@
 import { Section } from '@/layouts/Section';
 import { IoMdCheckmark } from 'react-icons/io';
 
-const Pricing = () => {
+export const Pricing = () => {
   return (
     <Section>
       <div id='services' className='mb-8'>
@@ -141,5 +141,3 @@ const Pricing = () => {
     </Section>
   );
 };
-
-export default Pricing;
