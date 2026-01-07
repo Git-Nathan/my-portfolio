@@ -16,7 +16,7 @@ import {
 
 export function Background() {
   return (
-    <div className='absolute inset-0 overflow-x-clip'>
+    <div className='fixed inset-0 overflow-x-clip'>
       <InverseMouseParallax className='left-1/2 -z-1'>
         <div className='translate-y-40 -rotate-12'>
           <FloatingShape className='-rotate-12' delay='-28s'>
