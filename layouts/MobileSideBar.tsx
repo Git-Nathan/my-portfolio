@@ -1,7 +1,7 @@
 'use client';
 
+import { AppLink } from '@/components/common/AppLink';
 import { Button } from '@/components/common/Button';
-import { AppLink } from '@/components/Link';
 import { CloseIcon } from '@/icons/CloseIcon';
 import { MenuIcon } from '@/icons/MenuIcon';
 import { cn } from '@/utils/cn';

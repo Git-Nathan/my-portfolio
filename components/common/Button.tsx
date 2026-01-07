@@ -6,39 +6,49 @@ import { ButtonHTMLAttributes, ReactNode } from 'react';
 
 export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   icon?: ReactNode;
-  variant?: 'solid';
+  endIcon?: ReactNode;
+  variant?: 'solid' | 'text';
 }
 
 export function Button({
   children,
   className,
   icon,
+  endIcon,
   variant = 'solid',
+  style,
   ...props
 }: Readonly<IButtonProps>) {
   const { mainColor } = useThemeStore();
 
-  const getBaseClasses = () => {
-    if (variant === 'solid') return 'bg-black px-5 py-2 text-white';
+  const baseClasses = {
+    solid: 'text-white shadow-lg',
+    text: '',
   };
 
-  const getHoverClasses = () => {
-    return 'ease-in-out hover:scale-105';
+  const getBaseStyle = () => {
+    if (variant === 'solid')
+      return { backgroundColor: mainColor, boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px' };
+
+    return {};
   };
 
   return (
     <button
       className={cn(
-        'cursor-pointer overflow-hidden rounded-full shadow-lg transition-all duration-200',
-        getBaseClasses(),
-        getHoverClasses(),
+        'flex cursor-pointer items-center gap-2 overflow-hidden rounded-full px-5 py-2 transition-all duration-200 ease-in-out hover:scale-105',
+        baseClasses[variant],
         className,
       )}
-      style={{ boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px', backgroundColor: mainColor }}
+      style={{
+        ...getBaseStyle(),
+        ...style,
+      }}
       {...props}
     >
       {icon}
       {children}
+      {endIcon}
     </button>
   );
 }

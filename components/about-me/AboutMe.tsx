@@ -1,5 +1,6 @@
 'use client';
 
+import { DocumentDownloadIcon } from '@/icons/DocumentDownloadIcon';
 import { Section } from '@/layouts/Section';
 import { Button } from '../common/Button';
 import { ColorText } from '../common/ColorText';
@@ -31,8 +32,13 @@ export const AboutMe = () => {
             </p>
           </div>
           <div className='mt-6 flex gap-5'>
-            <Button className='bg-purple shrink-0 text-lg font-medium whitespace-nowrap'>
-              My Work
+            <Button className='shrink-0 text-lg font-medium whitespace-nowrap'>My Work</Button>
+            <Button
+              variant='text'
+              className='shrink-0 text-lg font-medium whitespace-nowrap'
+              endIcon={<DocumentDownloadIcon />}
+            >
+              Download CV
             </Button>
           </div>
         </div>
