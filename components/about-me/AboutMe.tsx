@@ -8,9 +8,9 @@ import { ColorText } from '../common/ColorText';
 export const AboutMe = () => {
   return (
     <Section>
-      <div className='flex w-full items-center justify-between gap-20'>
-        <div className='size-40 flex-2 bg-red-400' />
-        <div className='flex flex-3 flex-col'>
+      <div className='flex w-full justify-between gap-20'>
+        <div className='h-140 flex-2 rounded-4xl bg-red-400' />
+        <div className='flex flex-3 flex-col pt-10'>
           <ColorText
             elements='h1'
             className='text-4xl font-bold tracking-tighter'
@@ -33,13 +33,15 @@ export const AboutMe = () => {
           </div>
           <div className='mt-6 flex gap-5'>
             <Button className='shrink-0 text-lg font-medium whitespace-nowrap'>My Work</Button>
-            <Button
-              variant='text'
-              className='shrink-0 text-lg font-medium whitespace-nowrap'
-              endIcon={<DocumentDownloadIcon />}
+            <a
+              href='/pdfs/Nathan_Ngo_Frontend_Engineer_React.pdf'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='flex shrink-0 items-center gap-2 rounded-full bg-gray-700 px-5 py-2 text-lg font-medium whitespace-nowrap text-white'
             >
-              Download CV
-            </Button>
+              Resume
+              <DocumentDownloadIcon />
+            </a>
           </div>
         </div>
       </div>
