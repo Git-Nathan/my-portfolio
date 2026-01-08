@@ -37,7 +37,7 @@ export const AboutMe = () => {
               href='/pdfs/Nathan_Ngo_Frontend_Engineer_React.pdf'
               target='_blank'
               rel='noopener noreferrer'
-              className='flex shrink-0 items-center gap-2 rounded-full bg-gray-700 px-5 py-2 text-lg font-medium whitespace-nowrap text-white'
+              className='flex shrink-0 items-center gap-2 rounded-full bg-gray-700 px-5 py-2 text-lg font-medium whitespace-nowrap text-white transition-all duration-200 ease-in-out hover:scale-105 dark:bg-gray-300 dark:text-black'
             >
               Resume
               <DocumentDownloadIcon />
