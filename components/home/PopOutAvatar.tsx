@@ -16,7 +16,7 @@ export function PopOutAvatar() {
         }}
       >
         <div
-          className='aspect-square w-full max-w-125 rotate-12 overflow-hidden rounded-[30%] transition-all duration-200'
+          className='relative aspect-square w-full max-w-125 rotate-12 overflow-hidden rounded-[30%] transition-all duration-200'
           style={{
             backgroundColor: `${mainColor}63`,
           }}
@@ -29,8 +29,8 @@ export function PopOutAvatar() {
             className='pointer-events-none absolute -bottom-10 left-[55%] z-10 -translate-x-[54%] scale-120 -rotate-12'
             src='/images/my-avatar.webp'
             alt='My Avatar'
-            width={800}
-            height={800}
+            width={600}
+            height={600}
           />
         </div>
 

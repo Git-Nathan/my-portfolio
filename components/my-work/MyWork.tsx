@@ -1,5 +1,6 @@
 import { Section } from '@/layouts/Section';
 import { ColorText } from '../common/ColorText';
+import { MyWorkItem } from './MyWorkItem';
 
 export const MyWork = () => {
   return (
@@ -16,10 +17,8 @@ export const MyWork = () => {
       >
         What I’ve Been Working On
       </ColorText>
-      <div className=''>
-        <div>asdf</div>
-        <div>asdf</div>
-      </div>
+
+      <MyWorkItem />
     </Section>
   );
 };

@@ -15,6 +15,7 @@ const eslintConfig = defineConfig([
     rules: {
       'react/self-closing-comp': ['error', { component: true, html: true }],
       'react/no-unknown-property': 'off',
+      'react-hooks/set-state-in-effect': 'off',
     },
   },
   globalIgnores(['.next/**', 'out/**', 'build/**', 'next-env.d.ts']),

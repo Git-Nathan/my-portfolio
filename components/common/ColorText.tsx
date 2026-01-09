@@ -16,7 +16,7 @@ export function ColorText(props: IColorTextProps) {
 
   if (underlineHoverEffect) {
     return (
-      <div className='flex w-fit flex-col hover:[&_.text-underline]:w-[200%]'>
+      <div className='flex w-fit max-w-full flex-col hover:[&_.text-underline]:w-full'>
         <Component style={{ color: mainColor }} {...restProps} />
         <div
           className='text-underline mt-1 h-1 w-1/2 rounded-full transition-all duration-200'

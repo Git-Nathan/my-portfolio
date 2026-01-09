@@ -4,6 +4,7 @@ import { Section } from '@/layouts/Section';
 import { Typewriter } from 'react-simple-typewriter';
 import { Button } from '../common/Button';
 import { ColorText } from '../common/ColorText';
+import { Tag } from '../common/Tag';
 import { ColorPalette } from './ColorPalette';
 import { PopOutAvatar } from './PopOutAvatar';
 
@@ -18,9 +19,7 @@ export const HomeSection = () => {
     >
       <div className='z-10 flex flex-1 flex-col items-start justify-center pe-8 md:pe-12'>
         <div className='max-w-xl'>
-          <div className='inline-flex items-center gap-2 rounded-lg border border-[#222]/10 py-1 ps-2 pe-3 font-semibold tracking-tight dark:border-[#d8d8d8]/50'>
-            <p>👋 Hello there!</p>
-          </div>
+          <Tag>👋 Hello there!</Tag>
           <ColorText elements='h1' className='mt-5 text-5xl font-bold tracking-tighter md:text-7xl'>
             I’m Nathan
             <br />

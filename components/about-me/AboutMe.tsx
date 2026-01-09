@@ -8,9 +8,9 @@ import { ColorText } from '../common/ColorText';
 export const AboutMe = () => {
   return (
     <Section>
-      <div className='flex w-full justify-between gap-20'>
-        <div className='h-140 flex-2 rounded-4xl bg-red-400' />
-        <div className='flex flex-3 flex-col pt-10'>
+      <div className='flex w-full flex-col-reverse justify-between gap-20 lg:flex-row'>
+        <div className='h-140 w-full rounded-4xl bg-red-400 lg:flex-2' />
+        <div className='flex flex-col pt-10 lg:flex-3'>
           <ColorText
             elements='h1'
             className='text-4xl font-bold tracking-tighter'
