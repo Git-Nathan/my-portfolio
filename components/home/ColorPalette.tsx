@@ -1,4 +1,4 @@
-import { ColorButton } from '../common/ColorButton';
+import { ColorButton } from '../common/button/ColorButton';
 
 export function ColorPalette() {
   return (

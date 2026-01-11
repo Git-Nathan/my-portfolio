@@ -2,14 +2,15 @@
 
 import { DocumentDownloadIcon } from '@/icons/DocumentDownloadIcon';
 import { Section } from '@/layouts/Section';
-import { Button } from '../common/Button';
+import { Button } from '../common/button/Button';
+import { ExternalLink } from '../common/button/ExternalLink';
 import { ColorText } from '../common/ColorText';
 
 export const AboutMe = () => {
   return (
     <Section>
       <div className='flex w-full flex-col-reverse justify-between gap-20 lg:flex-row'>
-        <div className='h-140 w-full rounded-4xl bg-red-400 lg:flex-2' />
+        <div className='h-130 w-full rounded-4xl bg-red-400 lg:flex-2' />
         <div className='flex flex-col pt-10 lg:flex-3'>
           <ColorText
             elements='h1'
@@ -33,15 +34,12 @@ export const AboutMe = () => {
           </div>
           <div className='mt-6 flex gap-5'>
             <Button className='shrink-0 text-lg font-medium whitespace-nowrap'>My Work</Button>
-            <a
+            <ExternalLink
               href='/pdfs/Nathan_Ngo_Frontend_Engineer_React.pdf'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='flex shrink-0 items-center gap-2 rounded-full bg-gray-700 px-5 py-2 text-lg font-medium whitespace-nowrap text-white transition-all duration-200 ease-in-out hover:scale-105 dark:bg-gray-300 dark:text-black'
+              icon={<DocumentDownloadIcon />}
             >
               Resume
-              <DocumentDownloadIcon />
-            </a>
+            </ExternalLink>
           </div>
         </div>
       </div>

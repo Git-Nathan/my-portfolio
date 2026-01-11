@@ -1,6 +1,6 @@
-import type { SVGProps } from 'react';
-import { shapePaths } from '@/utils/shapePaths';
 import { cn } from '@/utils/cn';
+import { shapePaths } from '@/utils/shapePaths';
+import type { SVGProps } from 'react';
 
 export interface IShapeProps extends SVGProps<SVGSVGElement> {
   path?: string;
@@ -16,7 +16,7 @@ export function Shape({
   spinDuration,
   spinDirection = 'normal',
   ...restProps
-}: Readonly<IShapeProps>) {
+}: IShapeProps) {
   return (
     <svg
       width={380}

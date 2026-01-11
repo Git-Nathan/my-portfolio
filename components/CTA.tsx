@@ -2,7 +2,7 @@
 
 import { Section } from '@/layouts/Section';
 import { useRef } from 'react';
-import { AppLink } from './common/AppLink';
+import { AppLink } from './common/button/AppLink';
 
 export const CTA = () => {
   const sectionRef = useRef(null);

@@ -25,7 +25,7 @@ export function MorphShape({
   paths = shapePaths,
   onClick,
   className,
-}: Readonly<IMorphShapeProps>) {
+}: IMorphShapeProps) {
   const [path, setPath] = useState(shapePaths[0]);
   const [nextPath, setNextPath] = useState(getExcludedRandomString(paths, shapePaths[0]));
   const [fromPath, setFromPath] = useState(shapePaths[0]);

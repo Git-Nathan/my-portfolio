@@ -19,6 +19,8 @@ export const MyWork = () => {
       </ColorText>
 
       <MyWorkItem />
+      <MyWorkItem reversed />
+      <MyWorkItem />
     </Section>
   );
 };

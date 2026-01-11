@@ -2,7 +2,7 @@
 
 import { Section } from '@/layouts/Section';
 import { Typewriter } from 'react-simple-typewriter';
-import { Button } from '../common/Button';
+import { Button } from '../common/button/Button';
 import { ColorText } from '../common/ColorText';
 import { Tag } from '../common/Tag';
 import { ColorPalette } from './ColorPalette';
@@ -19,7 +19,7 @@ export const HomeSection = () => {
     >
       <div className='z-10 flex flex-1 flex-col items-start justify-center pe-8 md:pe-12'>
         <div className='max-w-xl'>
-          <Tag>👋 Hello there!</Tag>
+          <Tag className='ps-2 pe-3'>👋 Hello there!</Tag>
           <ColorText elements='h1' className='mt-5 text-5xl font-bold tracking-tighter md:text-7xl'>
             I’m Nathan
             <br />
@@ -27,12 +27,7 @@ export const HomeSection = () => {
           <div className='mt-2 min-h-10 text-2xl leading-7 font-semibold lg:text-3xl'>
             A{' '}
             <Typewriter
-              words={[
-                'Frontend Developer',
-                'Programmer',
-                'Curious Learner',
-                'Pro Gamer of loading screens',
-              ]}
+              words={['Frontend Developer', 'Programmer', 'Curious Learner', 'Joyful Person']}
               cursor
               loop
             />

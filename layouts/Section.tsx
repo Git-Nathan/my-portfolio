@@ -12,7 +12,7 @@ export function Section({
   wrapperProps,
   className,
   ...restProps
-}: Readonly<ISectionProps>) {
+}: ISectionProps) {
   const { className: wrapperClassName, ...restWrapperProps } = wrapperProps || {};
 
   return (
@@ -23,7 +23,7 @@ export function Section({
       {backgroundObjects}
       <div
         className={cn(
-          'relative flex w-full max-w-350 flex-col items-center justify-center px-[4%]',
+          'relative mx-[4%] flex w-full max-w-5xl flex-col items-center justify-center',
           wrapperClassName,
         )}
         {...restWrapperProps}

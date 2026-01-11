@@ -1,7 +1,7 @@
 import { cn } from '@/utils/cn';
 import { HTMLAttributes } from 'react';
 
-export function BlurOverlay({ className, ...restProps }: Readonly<HTMLAttributes<HTMLDivElement>>) {
+export function BlurOverlay({ className, ...restProps }: HTMLAttributes<HTMLDivElement>) {
   return (
     <div
       className={cn(
