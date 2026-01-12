@@ -4,8 +4,6 @@ import { DocumentExportIcon } from '@/icons/DocumentExportIcon';
 import { useThemeStore } from '@/stores/theme.store';
 import { cn } from '@/utils/cn';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
-import { Button } from '../common/button/Button';
 import { ExternalLink } from '../common/button/ExternalLink';
 import { Tag } from '../common/Tag';
 
@@ -29,7 +27,6 @@ export function MyWorkItem({
   reversed = false,
 }: MyWorkItemProps) {
   const { mainColor } = useThemeStore();
-  const router = useRouter();
 
   return (
     <div
@@ -87,13 +84,15 @@ export function MyWorkItem({
           ))}
         </div>
         <div className={cn('flex items-center gap-4')}>
-          <Button
+          {/* TODO: Implement check it out */}
+
+          {/* <Button
             className='shrink-0 px-3 py-1 text-base font-medium whitespace-nowrap'
             variant='secondary'
             onClick={() => router.push(projectUrl)}
           >
             Check It Out
-          </Button>
+          </Button> */}
 
           <ExternalLink href={externalUrl} icon={<DocumentExportIcon />} variant='icon' />
         </div>
