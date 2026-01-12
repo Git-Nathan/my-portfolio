@@ -19,7 +19,7 @@ export const ExternalLink = ({
   const variantStyles = {
     solid:
       'flex shrink-0 items-center gap-2 rounded-full bg-gray-700 px-5 py-2 text-lg font-medium whitespace-nowrap text-white transition-all duration-200 ease-in-out hover:scale-105 dark:bg-gray-300 dark:text-black',
-    icon: 'flex shrink-0 items-center justify-center text-text-gray-reverse transition-all duration-200 ease-in-out p-2 bg-text-gray rounded-full',
+    icon: 'flex shrink-0 items-center justify-center text-text-gray transition-all duration-200 ease-in-out p-2 rounded-full',
   };
 
   return (

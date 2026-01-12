@@ -4,21 +4,37 @@ import { DocumentExportIcon } from '@/icons/DocumentExportIcon';
 import { useThemeStore } from '@/stores/theme.store';
 import { cn } from '@/utils/cn';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+import { Button } from '../common/button/Button';
 import { ExternalLink } from '../common/button/ExternalLink';
-import { LearnMoreButton } from '../common/button/LearnMoreButton';
 import { Tag } from '../common/Tag';
 
 interface MyWorkItemProps {
+  title: string;
+  description: string;
+  image: string;
+  tags: string[];
+  projectUrl: string;
+  externalUrl: string;
   reversed?: boolean;
 }
 
-export function MyWorkItem({ reversed = false }: MyWorkItemProps) {
+export function MyWorkItem({
+  title,
+  description,
+  image,
+  tags,
+  projectUrl,
+  externalUrl,
+  reversed = false,
+}: MyWorkItemProps) {
   const { mainColor } = useThemeStore();
+  const router = useRouter();
 
   return (
     <div
       className={cn(
-        'relative mt-16 flex min-h-90 w-full items-center',
+        'group relative flex min-h-90 w-full items-center',
         reversed ? 'justify-start' : 'justify-end',
       )}
     >
@@ -29,9 +45,9 @@ export function MyWorkItem({ reversed = false }: MyWorkItemProps) {
         )}
       >
         <Image
-          className='project-img z-0 object-cover object-top grayscale lg:grayscale-0'
-          src={'/images/thehelloapp.png'}
-          alt={'The Hello App'}
+          className='project-img z-0 object-cover object-top grayscale transition-transform duration-500 ease-in-out group-hover:scale-125 lg:grayscale-0'
+          src={image}
+          alt={title}
           fill
         />
       </div>
@@ -44,7 +60,7 @@ export function MyWorkItem({ reversed = false }: MyWorkItemProps) {
       >
         <div className={cn('flex flex-col gap-1', reversed ? 'items-start' : 'items-end')}>
           <Tag className='text-text-gray w-fit text-sm!'>Featured Project</Tag>
-          <h2 className='text-[28px] font-bold'>The Hello App</h2>
+          <h2 className='text-[28px] font-bold'>{title}</h2>
         </div>
         <p
           className={cn(
@@ -55,36 +71,31 @@ export function MyWorkItem({ reversed = false }: MyWorkItemProps) {
             backgroundColor: mainColor,
           }}
         >
-          I contributed to building and maintaining the service provider web and the admin panel web
-          of The Hello App. A platform that connects service providers with customers.
+          {description}
         </p>
         <div
           className={cn('flex flex-wrap gap-2 text-sm', reversed ? 'justify-start' : 'justify-end')}
         >
-          <Tag variant='solid' className='text-sm text-neutral-100 lg:text-base'>
-            React
-          </Tag>
-          <Tag variant='solid' className='text-sm text-neutral-100 lg:text-base'>
-            Tailwind CSS
-          </Tag>
-          <Tag variant='solid' className='text-sm text-neutral-100 lg:text-base'>
-            TypeScript
-          </Tag>
-          <Tag variant='solid' className='text-sm text-neutral-100 lg:text-base'>
-            Redux
-          </Tag>
-          <Tag variant='solid' className='text-sm text-neutral-100 lg:text-base'>
-            Ant Design
-          </Tag>
+          {tags.map((tag) => (
+            <Tag
+              key={`Tag-${projectUrl}-${tag}`}
+              variant='solid'
+              className='text-sm text-neutral-100 lg:text-base'
+            >
+              {tag}
+            </Tag>
+          ))}
         </div>
         <div className={cn('flex items-center gap-4')}>
-          <LearnMoreButton />
+          <Button
+            className='shrink-0 px-3 py-1 text-base font-medium whitespace-nowrap'
+            variant='secondary'
+            onClick={() => router.push(projectUrl)}
+          >
+            Check It Out
+          </Button>
 
-          <ExternalLink
-            href='https://thehelloapp.com/'
-            icon={<DocumentExportIcon />}
-            variant='icon'
-          />
+          <ExternalLink href={externalUrl} icon={<DocumentExportIcon />} variant='icon' />
         </div>
       </div>
     </div>

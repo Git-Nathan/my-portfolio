@@ -10,13 +10,13 @@
   --color-red: #ff6663;
   --color-blue: #0085FE;
   --test: #d8d8d8;
-  --text-gray: #374151;
-  --text-gray-reverse: #d1d5db;
+  --text-gray: #111827;
+  --text-gray-reverse: #f9fafb;
 }
 
 [data-theme="dark"] {
-  --text-gray: #d1d5db;
-  --text-gray-reverse: #374151;
+  --text-gray: #f9fafb;
+  --text-gray-reverse: #111827;
 }
 
 @theme inline {
@@ -43,7 +43,7 @@ body {
   color: black;
   font-family: var(--font-dmsans), sans-serif;
 
-  @apply dark:text-white;
+  @apply text-text-gray;
 }
 
 button {

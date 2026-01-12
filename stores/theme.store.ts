@@ -9,7 +9,7 @@ type ThemeStore = {
 export const useThemeStore = create<ThemeStore>()(
   persist(
     (set) => ({
-      mainColor: '#7655BE',
+      mainColor: '#169eb4',
       setMainColor: (color: string) => set({ mainColor: color }),
     }),
     {

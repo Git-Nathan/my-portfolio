@@ -7,7 +7,7 @@ import { ButtonHTMLAttributes, ReactNode } from 'react';
 export type IButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   icon?: ReactNode;
   endIcon?: ReactNode;
-  variant?: 'solid' | 'text';
+  variant?: 'solid' | 'text' | 'secondary';
 };
 
 export function Button({
@@ -23,6 +23,8 @@ export function Button({
 
   const baseClasses = {
     solid: 'text-white shadow-lg',
+    secondary:
+      'bg-gray-700 px-5 py-2 text-lg font-medium whitespace-nowrap text-white transition-all duration-200 ease-in-out hover:scale-105 dark:bg-gray-300 dark:text-black',
     text: '',
   };
 
