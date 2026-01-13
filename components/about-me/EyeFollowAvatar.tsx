@@ -1,6 +1,6 @@
 'use client';
 
-import { AvatarBody } from '@/icons/AvatarIcon/AvatarBody';
+import { AvatarBody } from '@/icons/avatar-icon/AvatarBody';
 import { useThemeStore } from '@/stores/theme.store';
 import { LeftEye } from './LeftEye';
 import { RightEye } from './RightEye';

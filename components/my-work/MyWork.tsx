@@ -23,11 +23,11 @@ export const MyWork = () => {
       externalUrl: 'https://novalearn.org/',
     },
     {
-      title: 'Sohaco Group',
+      title: 'Sohaco Landing Page',
       description:
         "A comprehensive corporate website for Sohaco Group, one of Vietnam's leading construction and real estate development companies. Features project showcases, company information, and investor relations.",
       image: '/images/sohacogroup.png',
-      tags: ['React', 'TypeScript', 'Corporate', 'Real Estate', 'Construction'],
+      tags: ['React', 'TypeScript', 'Landing Page', 'Tailwind CSS'],
       projectUrl: '/project/sohaco-group',
       externalUrl: 'https://sohacogroup.com.vn/',
     },
@@ -39,6 +39,7 @@ export const MyWork = () => {
       wrapperProps={{
         className: 'flex flex-col items-start',
       }}
+      id='my-work'
     >
       <ColorText
         elements='h2'

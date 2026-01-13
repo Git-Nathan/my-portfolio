@@ -1,4 +1,4 @@
-import { AvatarLeftEye } from '@/icons/AvatarIcon/AvatarLeftEye';
+import { AvatarLeftEye } from '@/icons/avatar-icon/AvatarLeftEye';
 import useMightyMouse from 'react-hook-mighty-mouse';
 
 export function LeftEye() {

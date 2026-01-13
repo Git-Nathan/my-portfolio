@@ -10,9 +10,17 @@ export interface IAppLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   href: string;
   children?: ReactNode;
   variant?: 'default';
+  scrollOffset?: number;
 }
 
-export function AppLink({ icon, href, children, className, ...restProps }: IAppLinkProps) {
+export function AppLink({
+  icon,
+  href,
+  children,
+  className,
+  scrollOffset = 0,
+  ...restProps
+}: IAppLinkProps) {
   const { mainColor } = useThemeStore();
 
   const getClassesByVariant = () => {
@@ -21,10 +29,11 @@ export function AppLink({ icon, href, children, className, ...restProps }: IAppL
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (href.startsWith('#')) {
-      e.preventDefault();
-      const element = document.querySelector(href);
+      const element = document.querySelector<HTMLElement>(href);
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        e.preventDefault();
+        const top = element.getBoundingClientRect().top + window.scrollY - scrollOffset;
+        window.scrollTo({ top, behavior: 'smooth' });
       }
     }
     if (restProps.onClick) {

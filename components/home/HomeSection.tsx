@@ -2,7 +2,7 @@
 
 import { Section } from '@/layouts/Section';
 import { Typewriter } from 'react-simple-typewriter';
-import { Button } from '../common/button/Button';
+import { AppLink } from '../common/button/AppLink';
 import { ColorText } from '../common/ColorText';
 import { Tag } from '../common/Tag';
 import { ColorPalette } from './ColorPalette';
@@ -11,7 +11,7 @@ import { PopOutAvatar } from './PopOutAvatar';
 export const HomeSection = () => {
   return (
     <Section
-      id='about'
+      id='home'
       wrapperProps={{
         className:
           'relative mt-24 flex w-full flex-col items-center justify-between gap-15 lg:mt-0 lg:h-screen lg:flex-row lg:gap-20 lg:pb-[6vh]',
@@ -38,9 +38,9 @@ export const HomeSection = () => {
             code.
           </p>
           <div className='mt-6 flex flex-col items-start gap-8 lg:flex-row lg:items-center'>
-            <Button className='bg-purple shrink-0 text-lg font-medium whitespace-nowrap'>
+            <AppLink className='px-5 text-lg' href='#about-me' scrollOffset={180}>
               About Me
-            </Button>
+            </AppLink>
 
             <ColorPalette />
           </div>
