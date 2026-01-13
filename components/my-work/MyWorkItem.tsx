@@ -28,12 +28,17 @@ export function MyWorkItem({
 }: MyWorkItemProps) {
   const { mainColor } = useThemeStore();
 
+  const openExternalLink = () => {
+    window.open(externalUrl, '_blank');
+  };
+
   return (
-    <div
+    <button
       className={cn(
         'group relative flex min-h-90 w-full items-center',
         reversed ? 'justify-start' : 'justify-end',
       )}
+      onClick={openExternalLink}
     >
       <div
         className={cn(
@@ -61,7 +66,7 @@ export function MyWorkItem({
         </div>
         <p
           className={cn(
-            'max-w-150 rounded-4xl px-6 py-4 text-base! text-white',
+            'max-w-150 rounded-4xl px-6 py-4 text-base! text-white shadow-lg',
             reversed ? 'text-start' : 'text-end',
           )}
           style={{
@@ -77,26 +82,16 @@ export function MyWorkItem({
             <Tag
               key={`Tag-${projectUrl}-${tag}`}
               variant='solid'
-              className='text-sm text-neutral-100 lg:text-base'
+              className='text-sm text-neutral-100 shadow-lg lg:text-base'
             >
               {tag}
             </Tag>
           ))}
         </div>
         <div className={cn('flex items-center gap-4')}>
-          {/* TODO: Implement check it out */}
-
-          {/* <Button
-            className='shrink-0 px-3 py-1 text-base font-medium whitespace-nowrap'
-            variant='secondary'
-            onClick={() => router.push(projectUrl)}
-          >
-            Check It Out
-          </Button> */}
-
           <ExternalLink href={externalUrl} icon={<DocumentExportIcon />} variant='icon' />
         </div>
       </div>
-    </div>
+    </button>
   );
 }

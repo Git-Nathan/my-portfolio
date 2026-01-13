@@ -35,7 +35,7 @@ export const MyWork = () => {
 
   return (
     <Section
-      className='mt-25 lg:mt-[30vh]'
+      className='mt-25 lg:mt-[33vh]'
       wrapperProps={{
         className: 'flex flex-col items-start',
       }}
