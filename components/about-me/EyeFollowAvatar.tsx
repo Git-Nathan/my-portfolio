@@ -24,6 +24,7 @@ export function EyeFollowAvatar({ smile = false }: EyeFollowAvatarProps) {
           <AvatarBody smile={smile} />
           <LeftEye />
           <RightEye />
+          <div id='face-center' className='absolute top-28' />
         </div>
       </div>
     </div>
