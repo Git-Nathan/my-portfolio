@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/next';
 import { Header } from '@/layouts/Header';
 import { ThemeProvider } from '@/providers/ThemeProvider';
 import type { Metadata } from 'next';
@@ -32,6 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
           <div id='mobile-sidebar-portal' />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
