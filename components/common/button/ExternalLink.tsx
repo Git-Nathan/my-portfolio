@@ -15,6 +15,7 @@ export const ExternalLink = ({
   icon,
   className,
   variant = 'solid',
+  ...restProps
 }: ExternalLinkProps) => {
   const variantStyles = {
     solid:
@@ -28,6 +29,7 @@ export const ExternalLink = ({
       target='_blank'
       rel='noopener noreferrer'
       className={cn(variantStyles[variant], className)}
+      {...restProps}
     >
       {children}
       {icon}
