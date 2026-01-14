@@ -14,7 +14,7 @@ export const Contact = () => {
 
       <p className='mt-6 max-w-120 text-center text-lg'>
         I’m always open to new ideas, collaborations, or just a friendly chat. If you’d like to work
-        together or simply say hello, drop me a message and let’s connect!”
+        together or simply say hello, drop me a message and let’s connect!
       </p>
 
       <ExternalLink href='mailto:ngothuandeveloper@gmail.com' className='mt-6' variant='color'>
