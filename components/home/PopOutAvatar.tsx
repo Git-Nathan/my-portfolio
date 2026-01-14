@@ -31,6 +31,7 @@ export function PopOutAvatar() {
             alt='My Avatar'
             width={600}
             height={600}
+            loading='eager'
           />
         </div>
 

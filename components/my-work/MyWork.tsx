@@ -8,7 +8,7 @@ export const MyWork = () => {
       title: 'The Hello App',
       description:
         'I contributed to building and maintaining the service provider web and the admin panel web of The Hello App. A platform that connects service providers with customers.',
-      image: '/images/thehelloapp.png',
+      image: '/images/thehelloapp.webp',
       tags: ['React', 'Tailwind CSS', 'TypeScript', 'Redux', 'Ant Design'],
       projectUrl: '/project/the-hello-app',
       externalUrl: 'https://thehelloapp.com/',
@@ -17,7 +17,7 @@ export const MyWork = () => {
       title: 'NovaLearn',
       description:
         'An innovative e-learning platform designed to provide accessible and engaging online education. Features interactive courses, progress tracking, and a modern learning experience for students and educators.',
-      image: '/images/novalearn.png',
+      image: '/images/novalearn.webp',
       tags: ['Next.js', 'GraphQL', 'React', 'TailwindCSS', 'Education'],
       projectUrl: '/project/novalearn',
       externalUrl: 'https://novalearn.org/',
@@ -26,7 +26,7 @@ export const MyWork = () => {
       title: 'Sohaco Landing Page',
       description:
         "A comprehensive corporate website for Sohaco Group, one of Vietnam's leading construction and real estate development companies. Features project showcases, company information, and investor relations.",
-      image: '/images/sohacogroup.png',
+      image: '/images/sohacogroup.webp',
       tags: ['React', 'TypeScript', 'Landing Page', 'Tailwind CSS'],
       projectUrl: '/project/sohaco-group',
       externalUrl: 'https://sohacogroup.com.vn/',
