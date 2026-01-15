@@ -6,6 +6,7 @@ import { cn } from '@/utils/cn';
 import Image from 'next/image';
 import { ExternalLink } from '../common/button/ExternalLink';
 import { Tag } from '../common/Tag';
+import { FadeIn } from '../motion-animation/FadeIn';
 
 interface MyWorkItemProps {
   title: string;
@@ -40,11 +41,12 @@ export function MyWorkItem({
       )}
       onClick={openExternalLink}
     >
-      <div
+      <FadeIn
         className={cn(
           'absolute aspect-16/14 h-full w-full overflow-hidden rounded-4xl opacity-30 lg:max-w-150 lg:opacity-100',
           reversed ? 'end-0' : 'start-0',
         )}
+        direction={reversed ? 'left' : 'right'}
       >
         <Image
           className='project-img z-0 object-cover object-top grayscale transition-transform duration-500 ease-in-out group-hover:scale-125 lg:grayscale-0'
@@ -53,13 +55,14 @@ export function MyWorkItem({
           fill
           sizes='(max-width: 768px) 100vw, 60vw'
         />
-      </div>
+      </FadeIn>
 
-      <div
+      <FadeIn
         className={cn(
           'z-10 mx-4 my-4 flex flex-col gap-4 lg:mx-0',
           reversed ? 'items-start' : 'items-end',
         )}
+        direction={reversed ? 'right' : 'left'}
       >
         <div className={cn('flex flex-col gap-1', reversed ? 'items-start' : 'items-end')}>
           <Tag className='text-text-gray w-fit text-sm!'>Featured Project</Tag>
@@ -92,7 +95,7 @@ export function MyWorkItem({
         <div className={cn('flex items-center gap-4')}>
           <ExternalLink href={externalUrl} icon={<DocumentExportIcon />} variant='icon' />
         </div>
-      </div>
+      </FadeIn>
     </button>
   );
 }

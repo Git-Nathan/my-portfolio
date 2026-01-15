@@ -1,11 +1,9 @@
+import { useSmileStore } from '@/stores/smile.store';
 import type { SVGProps } from 'react';
 
-type AvatarBodyProps = SVGProps<SVGSVGElement> & {
-  smile?: boolean;
-};
-
+type AvatarBodyProps = SVGProps<SVGSVGElement>;
 export const AvatarBody = (props: AvatarBodyProps) => {
-  const { smile, ...restProps } = props;
+  const { smiling } = useSmileStore();
 
   return (
     <svg
@@ -14,7 +12,7 @@ export const AvatarBody = (props: AvatarBodyProps) => {
       viewBox='0 0 204 321'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
-      {...restProps}
+      {...props}
     >
       <path
         fillRule='evenodd'
@@ -200,7 +198,7 @@ export const AvatarBody = (props: AvatarBodyProps) => {
         stroke='#452121'
         strokeWidth='6.60912'
       />
-      {smile && (
+      {smiling && (
         <>
           <path
             d='M69.7262 142.206C74.7929 135.928 81.1827 146.503 104.205 146.503C121.939 146.503 132.734 136.259 137.36 144.41C141.174 151.13 120.396 158.809 102.772 158.399C85.1476 157.989 64.6599 148.485 69.7262 142.206Z'
