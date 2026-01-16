@@ -4,15 +4,15 @@ import { cn } from '@/utils/cn';
 import { getExcludedRandomString } from '@/utils/getExcludedRandomString';
 import { shapePaths } from '@/utils/shapePaths';
 import { interpolate } from 'flubber';
-import { motion } from 'motion/react';
+import { motion, SVGMotionProps } from 'motion/react';
 import { useCallback, useEffect, useState } from 'react';
 
-export interface IMorphShapeProps {
+export type IMorphShapeProps = SVGMotionProps<SVGSVGElement> & {
   defaultShape?: string;
   paths?: string[];
   onClick?: () => void;
   className?: string;
-}
+};
 
 const ANIMATION_DURATION = 900;
 
@@ -28,6 +28,7 @@ export function MorphShape({
   paths = shapePaths,
   onClick,
   className,
+  ...props
 }: IMorphShapeProps) {
   const [path, setPath] = useState(shapePaths[0]);
   const [nextPath, setNextPath] = useState(getExcludedRandomString(paths, shapePaths[0]));
@@ -67,6 +68,8 @@ export function MorphShape({
       className={cn('size-6 cursor-pointer', className)}
       stroke='currentColor'
       fill='currentColor'
+      whileHover={{ scale: 1.1 }}
+      {...props}
     >
       <motion.path d={defaultShape ?? path} />
     </motion.svg>

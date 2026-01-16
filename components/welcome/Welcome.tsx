@@ -17,7 +17,7 @@ const Welcome = () => {
       exit={{ opacity: 0 }}
       className='absolute flex h-screen w-full items-center justify-center overflow-hidden'
     >
-      <motion.p className='indent-1 text-5xl font-semibold'>
+      <motion.p className='indent-1 text-6xl font-semibold'>
         {text.split('').map((char, index) => (
           <motion.span
             key={`welcome-char-${char}-${index}`}
