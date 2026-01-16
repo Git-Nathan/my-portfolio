@@ -15,17 +15,20 @@ export const AboutMe = () => {
       }}
       id='about-me'
     >
-      <EyeFollowAvatar />
+      <FadeIn className='flex h-130 w-full justify-center lg:flex-2' direction='right'>
+        <EyeFollowAvatar />
+      </FadeIn>
 
       <div className='flex flex-col lg:flex-3'>
-        <ColorText
-          elements='h2'
-          className='text-4xl font-bold tracking-tighter'
-          underlineHoverEffect
-          animationDirection='left'
-        >
-          About Me
-        </ColorText>
+        <FadeIn direction='left'>
+          <ColorText
+            elements='h2'
+            className='text-4xl font-bold tracking-tighter'
+            underlineHoverEffect
+          >
+            About Me
+          </ColorText>
+        </FadeIn>
         <div className='mt-6 flex flex-col gap-3 text-lg'>
           <FadeIn as='p' direction='left'>
             I&apos;m Thuan — but you can call me Nathan. I&apos;m a frontend developer who loves

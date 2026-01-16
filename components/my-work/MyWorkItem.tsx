@@ -49,7 +49,7 @@ export function MyWorkItem({
         direction={reversed ? 'left' : 'right'}
       >
         <Image
-          className='project-img z-0 object-cover object-top grayscale transition-transform duration-500 ease-in-out group-hover:scale-125 lg:grayscale-0'
+          className='project-img z-0 object-cover object-top opacity-20 grayscale transition-transform duration-500 ease-in-out group-hover:scale-125 lg:opacity-100 lg:grayscale-0 dark:opacity-100 dark:brightness-20 dark:lg:brightness-100'
           src={image}
           alt={title}
           fill
@@ -65,7 +65,7 @@ export function MyWorkItem({
         direction={reversed ? 'right' : 'left'}
       >
         <div className={cn('flex flex-col gap-1', reversed ? 'items-start' : 'items-end')}>
-          <Tag className='text-text-gray w-fit text-sm!'>Featured Project</Tag>
+          <Tag className='lg:text-text-gray w-fit text-sm!'>Featured Project</Tag>
           <h2 className='text-[28px] font-bold'>{title}</h2>
         </div>
         <p

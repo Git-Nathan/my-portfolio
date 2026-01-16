@@ -14,10 +14,13 @@ export interface IMorphShapeProps {
   className?: string;
 }
 
-const ANIMATION_DURATION = 200;
+const ANIMATION_DURATION = 900;
 
-function easeInOutCubic(t: number): number {
-  return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+function easeOutElastic(t: number): number {
+  const c5 = (2 * Math.PI) / 2.5;
+  if (t === 0) return 0;
+  if (t === 1) return 1;
+  return Math.pow(2.5, -8 * t) * Math.sin((t * 10 - 0.75) * c5) + 1;
 }
 
 export function MorphShape({
@@ -31,13 +34,13 @@ export function MorphShape({
   const [fromPath, setFromPath] = useState(shapePaths[0]);
 
   useEffect(() => {
-    const interpolator = interpolate(fromPath, nextPath, { maxSegmentLength: 2 });
+    const interpolator = interpolate(fromPath, nextPath, { maxSegmentLength: 16 });
     const startTime = Date.now();
 
     const animate = () => {
       const elapsed = Date.now() - startTime;
       const progress = Math.min(elapsed / ANIMATION_DURATION, 1);
-      const easedProgress = easeInOutCubic(progress);
+      const easedProgress = easeOutElastic(progress);
 
       setPath(interpolator(easedProgress));
 

@@ -1,5 +1,6 @@
 import { Section } from '@/layouts/Section';
 import { ColorText } from '../common/ColorText';
+import { FadeIn } from '../motion-animation/FadeIn';
 import { MyWorkItem } from './MyWorkItem';
 
 export const MyWork = () => {
@@ -41,18 +42,24 @@ export const MyWork = () => {
       }}
       id='my-work'
     >
-      <ColorText
-        elements='h2'
-        className='w-fit text-4xl font-bold tracking-tighter'
-        underlineHoverEffect
-      >
-        What I’ve Been Working On
-      </ColorText>
+      <FadeIn direction='up'>
+        <ColorText
+          elements='h2'
+          className='w-fit text-4xl font-bold tracking-tighter'
+          underlineHoverEffect
+        >
+          What I’ve Been Working On
+        </ColorText>
+      </FadeIn>
 
       <div className='mt-10 flex w-full flex-col gap-20'>
         {myWorks.map((work, index) => (
           <MyWorkItem key={`MyWorkItem-${work.projectUrl}`} {...work} reversed={index % 2 === 1} />
         ))}
+      </div>
+
+      <div className='mt-10 flex w-full justify-center'>
+        <p className='text-lg font-medium'>And More...</p>
       </div>
     </Section>
   );

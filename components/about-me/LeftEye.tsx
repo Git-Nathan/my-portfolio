@@ -10,7 +10,7 @@ export function LeftEye() {
     <div
       className='absolute top-19.5 left-8.25 z-50 flex size-13 items-center justify-center'
       style={{
-        transform: `translate(${Number(position.x) / 150}px, ${Number(position.y) / 150}px)`,
+        transform: `translate(${Number(position.x) / 120}px, ${Number(position.y) / 120}px)`,
       }}
     >
       <AvatarLeftEye

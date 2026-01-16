@@ -1,3 +1,4 @@
+import Welcome from '@/components/welcome/Welcome';
 import { Background } from '@/layouts/Background';
 import { Header } from '@/layouts/Header';
 import { ThemeProvider } from '@/providers/ThemeProvider';
@@ -28,7 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProvider defaultTheme='system' enableSystem>
           <Background />
           <Header />
-          {/* <Welcome /> */}
+          <Welcome />
           {children}
           <div id='mobile-sidebar-portal' />
         </ThemeProvider>

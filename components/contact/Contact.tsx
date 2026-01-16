@@ -11,10 +11,15 @@ import { FadeIn } from '../motion-animation/FadeIn';
 export const Contact = () => {
   return (
     <Section className='h-screen' id='contact'>
-      <ColorText elements='h2' className='text-4xl font-bold tracking-tighter' underlineHoverEffect>
-        Get In Touch
-      </ColorText>
-
+      <FadeIn direction='up'>
+        <ColorText
+          elements='h2'
+          className='text-4xl font-bold tracking-tighter'
+          underlineHoverEffect
+        >
+          Get In Touch
+        </ColorText>
+      </FadeIn>
       <FadeIn as='p' className='mt-6 max-w-120 text-center text-lg'>
         I’m always open to new ideas, collaborations, or just a friendly chat. If you’d like to work
         together or simply say hello, drop me a message and let’s connect!
