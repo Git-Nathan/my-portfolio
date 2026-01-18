@@ -55,7 +55,7 @@ export const HomeSection = () => {
       </motion.div>
 
       <ScaleInMotion
-        className='relative w-[80vw] max-w-125 flex-1 lg:me-[2vw]'
+        className='relative w-[80vw] max-w-125 flex-1 pb-2 lg:me-[2vw] lg:pb-0'
         delay={3.2}
         duration={1.2}
       >
